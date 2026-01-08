@@ -1,1284 +1,1593 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nnogge Lovis Nkede | Executive Portfolio | Strategic Leadership & Digital Transformation</title>
-    <meta name="description" content="Executive portfolio of Nnogge Lovis Nkede - PfMP®, PgMP®, PMP® certified strategic leader specializing in portfolio management and digital transformation">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        
-        * {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        :root {
-            --primary-navy: #1e3a8a;
-            --primary-blue: #1e40af;
-            --accent-teal: #0d9488;
-            --accent-gold: #d4af37;
-            --text-primary: #1f2937;
-            --text-secondary: #6b7280;
-            --bg-light: #f8fafc;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        .executive-gradient {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-        }
-        
-        .accent-gradient {
-            background: linear-gradient(135deg, var(--accent-teal) 0%, #14b8a6 100%);
-        }
-        
-        .card-elevated {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .card-elevated:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
-        .metric-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            border: 1px solid #e5e7eb;
-        }
-        
-        .section-divider {
-            border-left: 4px solid var(--accent-teal);
-            padding-left: 1.5rem;
-        }
-        
-        .credential-badge {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            background: linear-gradient(135deg, var(--accent-teal) 0%, #14b8a6 100%);
-            color: white;
-            box-shadow: 0 2px 4px rgba(13, 148, 136, 0.3);
-        }
-        
-        .nav-button {
-            padding: 0.75rem 1.25rem;
-            border-radius: 8px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            background: #f3f4f6;
-            color: var(--text-primary);
-            border: 1px solid #e5e7eb;
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
-        
-        .nav-button:hover {
-            background: #e5e7eb;
-            transform: translateY(-1px);
-        }
-        
-        .nav-button.active {
-            background: linear-gradient(135deg, var(--accent-teal) 0%, #14b8a6 100%);
-            color: white;
-            border-color: var(--accent-teal);
-            box-shadow: 0 4px 6px rgba(13, 148, 136, 0.25);
-        }
-        
-        .progress-bar {
-            background: #e5e7eb;
-            border-radius: 100px;
-            overflow: hidden;
-            height: 10px;
-        }
-        
-        .progress-fill {
-            background: linear-gradient(90deg, var(--accent-teal) 0%, #14b8a6 100%);
-            height: 100%;
-            border-radius: 100px;
-            transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .stat-circle {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .impact-number {
-            font-size: 3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--accent-teal) 0%, #14b8a6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
-        }
-        
-        .timeline-container {
-            position: relative;
-            padding: 2rem 0;
-        }
-        
-        .timeline-item {
-            position: relative;
-            padding-left: 3.5rem;
-            margin-bottom: 2.5rem;
-        }
-        
-        .timeline-dot {
-            position: absolute;
-            left: 0;
-            top: 8px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: var(--accent-teal);
-            border: 4px solid white;
-            box-shadow: 0 0 0 3px var(--accent-teal);
-            z-index: 2;
-        }
-        
-        .timeline-line {
-            position: absolute;
-            left: 9px;
-            top: 28px;
-            bottom: -2.5rem;
-            width: 2px;
-            background: linear-gradient(180deg, var(--accent-teal) 0%, #e5e7eb 100%);
-        }
-        
-        .kpi-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .kpi-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--accent-teal);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-        
-        .kpi-card:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            transform: translateX(4px);
-        }
-        
-        .competency-bar {
-            height: 40px;
-            background: linear-gradient(90deg, var(--accent-teal) 0%, #14b8a6 100%);
-            border-radius: 8px;
-            position: relative;
-            margin-bottom: 1rem;
-            box-shadow: 0 2px 8px rgba(13, 148, 136, 0.3);
-            transition: all 0.3s ease;
-        }
-        
-        .competency-bar:hover {
-            transform: translateX(8px);
-            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.4);
-        }
-        
-        .competency-label {
-            position: absolute;
-            left: 1.25rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: white;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        
-        .competency-value {
-            position: absolute;
-            right: 1.25rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: white;
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-        
-        .brand-wheel-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 900px;
-            position: relative;
-            margin: 3rem auto;
-            flex-direction: column;
-            padding: 2rem;
-        }
-        
-        .brand-wheel {
-            position: relative;
-            width: 800px;
-            height: 800px;
-            border-radius: 50%;
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
-            background: white;
-        }
-        
-        .wheel-segment {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-        }
-        
-        .segment-core {
-            clip-path: polygon(50% 50%, 50% 0%, 79.4% 9.5%, 50% 50%);
-            background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-        }
-        
-        .segment-personality {
-            clip-path: polygon(50% 50%, 79.4% 9.5%, 97.6% 34.5%, 50% 50%);
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-        }
-        
-        .segment-values {
-            clip-path: polygon(50% 50%, 97.6% 34.5%, 97.6% 65.5%, 79.4% 90.5%, 50% 50%);
-            background: linear-gradient(180deg, var(--accent-teal) 0%, #14b8a6 100%);
-        }
-        
-        .segment-benefits {
-            clip-path: polygon(50% 50%, 79.4% 90.5%, 20.6% 90.5%, 50% 50%);
-            background: linear-gradient(225deg, #14b8a6 0%, #2dd4bf 100%);
-        }
-        
-        .segment-attributes {
-            clip-path: polygon(50% 50%, 20.6% 90.5%, 2.4% 65.5%, 2.4% 34.5%, 20.6% 9.5%, 50% 50%);
-            background: linear-gradient(270deg, #d97706 0%, #f59e0b 100%);
-        }
-        
-        .wheel-spoke {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 50%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent-gold) 0%, transparent 100%);
-            transform-origin: left center;
-            z-index: 5;
-        }
-        
-        .spoke-1 { transform: translate(0, -50%) rotate(0deg); }
-        .spoke-2 { transform: translate(0, -50%) rotate(72deg); }
-        .spoke-3 { transform: translate(0, -50%) rotate(144deg); }
-        .spoke-4 { transform: translate(0, -50%) rotate(216deg); }
-        .spoke-5 { transform: translate(0, -50%) rotate(288deg); }
-        
-        .brand-wheel-center {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 320px;
-            height: 320px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-            z-index: 10;
-            border: 5px solid var(--accent-gold);
-        }
-        
-        .segment-content {
-            position: absolute;
-            color: white;
-            padding: 2rem 1.5rem;
-            max-width: 350px;
-        }
-        
-        .segment-core .segment-content { top: 10%; left: 50%; transform: translateX(-50%); text-align: center; }
-        .segment-personality .segment-content { top: 20%; right: 5%; text-align: left; }
-        .segment-values .segment-content { bottom: 15%; right: 8%; text-align: left; }
-        .segment-benefits .segment-content { bottom: 5%; left: 50%; transform: translateX(-50%); text-align: center; }
-        .segment-attributes .segment-content { top: 20%; left: 5%; text-align: left; }
-        
-        .segment-content h4 {
-            font-size: 0.95rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .segment-content ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .segment-content li {
-            font-size: 0.75rem;
-            line-height: 1.6;
-            margin-bottom: 0.5rem;
-            padding-left: 1.2rem;
-            position: relative;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-        }
-        
-        .segment-content li::before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: var(--accent-gold);
-            font-weight: bold;
-        }
-        
-        .action-step {
-            display: flex;
-            align-items: start;
-            gap: 1rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            border-radius: 10px;
-            border-left: 3px solid var(--accent-teal);
-            transition: all 0.3s ease;
-        }
-        
-        .action-step:hover {
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-            transform: translateX(8px);
-        }
-        
-        .step-number {
-            flex-shrink: 0;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-teal) 0%, #14b8a6 100%);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.9rem;
-            box-shadow: 0 2px 6px rgba(13, 148, 136, 0.3);
-        }
-        
-        .loading-skeleton {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        
-        @media (max-width: 1024px) {
-            .brand-wheel { width: 600px; height: 600px; }
-            .brand-wheel-center { width: 240px; height: 240px; padding: 1.5rem; }
-            .segment-content { padding: 1.5rem 1rem; max-width: 280px; }
-        }
-        
-        @media (max-width: 768px) {
-            .brand-wheel { width: 90vw; max-width: 500px; height: 90vw; max-height: 500px; }
-            .brand-wheel-center { width: 180px; height: 180px; padding: 1rem; }
-            .segment-content { padding: 1rem 0.75rem; max-width: 200px; font-size: 0.65rem; }
-            .nav-button { padding: 0.5rem 0.75rem; font-size: 0.75rem; }
-            .impact-number { font-size: 2rem; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nnogge Lovis Nkede | Executive Portfolio | Portfolio Leadership & Digital Transformation</title>
+  <meta name="description" content="Executive portfolio of Nnogge Lovis Nkede (MBA PM, PfMP®, PgMP®, PMP®) — strategic portfolio leadership, PMO governance, and digital transformation delivering measurable business outcomes." />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nnogge Lovis Nkede | Executive Portfolio" />
+  <meta property="og:description" content="Strategic portfolio leadership, PMO governance & digital transformation delivering measurable business outcomes." />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind CDN (required) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    :root{
+      --navy:#0b1220;
+      --slate:#0f172a;
+      --teal:#0d9488;
+      --teal2:#14b8a6;
+      --gold:#d4af37;
+      --ink:#0b1220;
+    }
+
+    *{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    html{ scroll-behavior:smooth; }
+
+    .hero-bg{
+      background:
+        radial-gradient(1200px 600px at 20% 10%, rgba(20,184,166,.22), transparent 60%),
+        radial-gradient(900px 500px at 85% 20%, rgba(212,175,55,.16), transparent 55%),
+        linear-gradient(135deg, #050914 0%, #0b1220 40%, #0f172a 100%);
+    }
+
+    .glass{
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+    }
+
+    .card{
+      background: #fff;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(2, 6, 23, 0.06);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card:hover{ transform: translateY(-3px); box-shadow: 0 18px 40px rgba(2, 6, 23, 0.10); }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      padding:.35rem .7rem;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+      color: #fff;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal2) 100%);
+      box-shadow: 0 10px 20px rgba(13,148,136,.20);
+      white-space: nowrap;
+    }
+
+    .pill{
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      background: rgba(248,250,252,.9);
+      border-radius: 999px;
+      padding: .4rem .7rem;
+      font-size: .8rem;
+      font-weight: 600;
+      color: rgba(15,23,42,.82);
+    }
+
+    .nav-btn{
+      padding: .6rem .9rem;
+      border-radius: 10px;
+      font-size: .85rem;
+      font-weight: 650;
+      border: 1px solid rgba(15,23,42,.10);
+      background: #fff;
+      color: rgba(2,6,23,.88);
+      transition: all .18s ease;
+    }
+    .nav-btn:hover{ transform: translateY(-1px); background: rgba(15,23,42,.03); }
+    .nav-btn[aria-current="true"]{
+      color:#fff;
+      border-color: rgba(13,148,136,.55);
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal2) 100%);
+      box-shadow: 0 12px 24px rgba(13,148,136,.22);
+    }
+
+    .kpi{
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border: 1px solid rgba(15,23,42,.08);
+      border-radius: 16px;
+    }
+
+    .progress{ background: rgba(15,23,42,.10); border-radius: 999px; height: 10px; overflow:hidden; }
+    .progress > div{ height: 100%; border-radius:999px; background: linear-gradient(90deg, var(--teal) 0%, var(--teal2) 100%); width:0%; transition: width 900ms cubic-bezier(0.4, 0, 0.2, 1); }
+
+    .divider{ border-left: 4px solid var(--teal); padding-left: 1.2rem; }
+
+    .action-step{
+      display:flex; gap: 1rem; align-items: flex-start;
+      padding: 1rem;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border: 1px solid rgba(15,23,42,.08);
+      transition: transform .18s ease, background .18s ease;
+    }
+    .action-step:hover{ transform: translateX(4px); background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); }
+    .step{
+      width: 34px; height: 34px; border-radius: 999px;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal2) 100%);
+      color:#fff; font-weight: 800; display:flex; align-items:center; justify-content:center;
+      box-shadow: 0 12px 22px rgba(13,148,136,.22);
+      flex-shrink: 0;
+    }
+
+    .sr-only-focusable:active, .sr-only-focusable:focus{
+      position: static !important;
+      width: auto !important;
+      height: auto !important;
+      margin: 0 !important;
+      overflow: visible !important;
+      clip: auto !important;
+      white-space: normal !important;
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior:auto; }
+      .card, .nav-btn, .action-step{ transition: none; }
+      .progress > div{ transition:none; }
+    }
+
+    /* Print-friendly */
+    @media print{
+      nav, #ctaBar, #toast, #contactModal, .no-print{ display:none !important; }
+      body{ background:#fff !important; }
+      .card{ box-shadow:none !important; }
+    }
+  </style>
 </head>
-<body class="bg-gray-50">
-    
-    <!-- Executive Header -->
-    <header class="executive-gradient text-white py-16 px-4">
-        <div class="max-w-7xl mx-auto">
-            <h1 class="text-5xl md:text-6xl font-bold mb-4 tracking-tight">Nnogge Lovis Nkede</h1>
-            <p class="text-2xl md:text-3xl mb-3 font-light">MBA (PM) | PfMP® | PgMP® | PMP®</p>
-            <p class="text-xl opacity-90 mb-6 font-medium">DBA Candidate - Strategic Management & Business Modeling</p>
-            <div class="flex flex-wrap gap-6 text-base opacity-95">
-                <span class="flex items-center gap-2"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Douala, Cameroon</span>
-                <span class="flex items-center gap-2"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>nnogge.lovis@gmail.com</span>
-                <span class="flex items-center gap-2"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>(+237) 69994 6264</span>
-            </div>
-        </div>
-    </header>
 
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 py-4">
-            <div class="flex flex-wrap justify-center gap-3">
-                <button onclick="filterProjects('all')" class="nav-button active">Executive Overview</button>
-                <button onclick="filterProjects('portfolio-management')" class="nav-button">Portfolio Leadership</button>
-                <button onclick="filterProjects('program-management')" class="nav-button">Program Excellence</button>
-                <button onclick="filterProjects('strategic-management')" class="nav-button">Strategic Management</button>
-                <button onclick="filterProjects('digital-transformation')" class="nav-button">Digital Transformation</button>
-                <button onclick="filterProjects('dba-implementation')" class="nav-button">DBA Research</button>
-                <button onclick="showPersonalBrand()" class="nav-button">Brand Strategy</button>
-            </div>
-        </div>
-    </nav>
+<body class="bg-slate-50 text-slate-900">
+  <a href="#main" class="sr-only sr-only-focusable px-4 py-2 bg-white border rounded-md">Skip to content</a>
 
-    <!-- Dashboard Section -->
-    <section id="dashboard-section" class="max-w-7xl mx-auto px-4 py-12">
-        <!-- Dashboard content populated by JavaScript -->
+  <!-- Sticky CTA bar -->
+  <div id="ctaBar" class="no-print fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[min(980px,92vw)]">
+    <div class="glass rounded-2xl px-4 py-3 text-white flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
+      <div class="flex-1">
+        <div class="text-sm opacity-90">Available for executive advisory, PMO leadership, and transformation delivery</div>
+        <div class="font-semibold">Let’s discuss outcomes, scope, and the fastest path to value.</div>
+      </div>
+      <div class="flex gap-2">
+        <button class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 font-semibold" id="btnCopyEmail" type="button">Copy email</button>
+        <button class="px-4 py-2 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-extrabold" id="btnOpenContact" type="button">Request a call</button>
+        <button class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15" id="btnPrint" type="button">Print</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Hero -->
+  <header class="hero-bg text-white">
+    <div class="max-w-7xl mx-auto px-4 pt-14 pb-10">
+      <div class="flex flex-col lg:flex-row lg:items-end gap-10">
+        <div class="flex-1">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="badge">PfMP®</span>
+            <span class="badge">PgMP®</span>
+            <span class="badge">PMP®</span>
+            <span class="badge">MBA (Project Management)</span>
+            <span class="badge">Doctor of Business Administration in Strategic Management and Business Modeling</span>
+          </div>
+
+          <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05]">Nnogge Lovis Nkede</h1>
+          <p class="mt-4 text-xl md:text-2xl text-white/90 font-medium">
+            Executive portfolio leader delivering measurable business value through <span class="text-teal-300 font-extrabold">PMO governance</span>,
+            <span class="text-teal-300 font-extrabold">digital transformation</span>, and <span class="text-teal-300 font-extrabold">strategic execution</span>.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="pill">Douala, Cameroon</span>
+            <span class="pill">Africa & MENA delivery</span>
+            <span class="pill">ERP / Cloud / Change</span>
+            <span class="pill">Portfolio value managed: $50M+</span>
+          </div>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <button id="btnPrimaryCTA" class="px-5 py-3 rounded-xl bg-teal-400 hover:bg-teal-300 text-slate-950 font-extrabold" type="button">
+              Book a 20‑minute executive briefing
+            </button>
+            <a href="#portfolio" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 font-semibold">View outcomes</a>
+            <a href="#services" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 font-semibold">Services</a>
+          </div>
+
+          <div class="mt-6 text-sm text-white/80 leading-relaxed">
+            <span class="font-semibold text-white">Positioning:</span> I help CEOs, COOs, CIOs and Boards translate strategy into funded portfolios,
+            de-risk execution, and accelerate adoption—so transformation produces measurable results, not slide decks.
+          </div>
+        </div>
+
+        <aside class="w-full lg:w-[420px]">
+          <div class="glass rounded-2xl p-6">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="text-sm text-white/80">Executive snapshot</div>
+                <div class="text-2xl font-extrabold">Impact at a glance</div>
+              </div>
+              <div class="text-xs text-white/70">Updated: 2026</div>
+            </div>
+
+            <div class="mt-6 grid grid-cols-2 gap-4">
+              <div class="kpi p-4">
+                <div class="text-xs text-slate-600 font-semibold">Stakeholder satisfaction</div>
+                <div class="text-2xl font-extrabold text-slate-900">90%</div>
+                <div class="mt-2 progress"><div data-progress="90"></div></div>
+              </div>
+              <div class="kpi p-4">
+                <div class="text-xs text-slate-600 font-semibold">Project success rate</div>
+                <div class="text-2xl font-extrabold text-slate-900">95%</div>
+                <div class="mt-2 progress"><div data-progress="95"></div></div>
+              </div>
+              <div class="kpi p-4">
+                <div class="text-xs text-slate-600 font-semibold">Countries delivered</div>
+                <div class="text-2xl font-extrabold text-slate-900">6+</div>
+                <div class="mt-2 text-xs text-slate-600">Cameroon • Ghana • Benin • +</div>
+              </div>
+              <div class="kpi p-4">
+                <div class="text-xs text-slate-600 font-semibold">Cost optimization</div>
+                <div class="text-2xl font-extrabold text-slate-900">65%</div>
+                <div class="mt-2 progress"><div data-progress="65"></div></div>
+              </div>
+            </div>
+
+            <div class="mt-5 border-t border-white/10 pt-4 text-sm text-white/85">
+              <div class="flex flex-wrap gap-3">
+                <a class="underline underline-offset-4 hover:text-teal-200" href="mailto:nnogge.lovis@gmail.com">nnogge.lovis@gmail.com</a>
+                <span class="text-white/60">•</span>
+                <a class="underline underline-offset-4 hover:text-teal-200" href="tel:+237699946264">+237 69994 6264</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- Logos / credibility strip (placeholders) -->
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 py-6">
+        <div class="text-xs uppercase tracking-[0.18em] text-white/60 mb-3">Experience with organizations and ecosystems including</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="pill">Orange Cameroon</span>
+          <span class="pill">MTN (multi‑country)</span>
+          <span class="pill">Westcon Group</span>
+          <span class="pill">Higher‑ed governance (Board)</span>
+          <span class="pill">Oracle ecosystem</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-white/90 backdrop-blur border-b border-slate-200 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 py-3">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-xl bg-slate-900 text-white flex items-center justify-center font-extrabold">NL</div>
+          <div class="text-sm">
+            <div class="font-extrabold leading-tight">Executive Portfolio</div>
+            <div class="text-slate-500 leading-tight">Strategy → Execution → Adoption</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <button class="nav-btn" data-view="overview" aria-current="true" type="button">Overview</button>
+          <button class="nav-btn" data-view="portfolio-management" type="button">Portfolio leadership</button>
+          <button class="nav-btn" data-view="program-management" type="button">Program delivery</button>
+          <button class="nav-btn" data-view="strategic-management" type="button">Strategy & modeling</button>
+          <button class="nav-btn" data-view="digital-transformation" type="button">Digital transformation</button>
+          <button class="nav-btn" data-view="dba-implementation" type="button">DBA Implementation Project</button>
+          <button class="nav-btn" data-view="brand" type="button">Brand strategy</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- Services -->
+    <section id="services" class="max-w-7xl mx-auto px-4 py-12">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Services leaders hire me for</h2>
+          <p class="mt-3 text-slate-600 max-w-3xl">Packaged as advisory or hands-on delivery. Designed for executives who want business outcomes, strong governance, and adoption that sticks.</p>
+        </div>
+        <div class="flex gap-2">
+          <button id="btnOpenContact2" class="px-4 py-2 rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800" type="button">Engage me</button>
+          <a class="px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 font-semibold" href="#portfolio">See proof</a>
+        </div>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card p-6">
+          <div class="text-sm font-bold text-teal-700">01</div>
+          <h3 class="mt-2 text-lg font-extrabold">Portfolio strategy & governance</h3>
+          <p class="mt-2 text-slate-600 text-sm">Prioritization, funding logic, benefits tracking, executive dashboards, decision cadence.</p>
+          <ul class="mt-4 text-sm text-slate-700 space-y-2">
+            <li>• Portfolio health reviews</li>
+            <li>• Benefits realization system</li>
+            <li>• Stage gates & steering packs</li>
+          </ul>
+        </div>
+        <div class="card p-6">
+          <div class="text-sm font-bold text-teal-700">02</div>
+          <h3 class="mt-2 text-lg font-extrabold">Enterprise PMO build / turnaround</h3>
+          <p class="mt-2 text-slate-600 text-sm">Operating model, standards, tooling, capability build, execution discipline.</p>
+          <ul class="mt-4 text-sm text-slate-700 space-y-2">
+            <li>• PMO charter & KPI design</li>
+            <li>• Delivery playbooks</li>
+            <li>• Coaching & enablement</li>
+          </ul>
+        </div>
+        <div class="card p-6">
+          <div class="text-sm font-bold text-teal-700">03</div>
+          <h3 class="mt-2 text-lg font-extrabold">Digital transformation delivery</h3>
+          <p class="mt-2 text-slate-600 text-sm">ERP/cloud programs, process optimization, adoption & change management at scale.</p>
+          <ul class="mt-4 text-sm text-slate-700 space-y-2">
+            <li>• ADKAR/Kotter execution</li>
+            <li>• Training & comms strategy</li>
+            <li>• Go‑live stabilization</li>
+          </ul>
+        </div>
+        <div class="card p-6">
+          <div class="text-sm font-bold text-teal-700">04</div>
+          <h3 class="mt-2 text-lg font-extrabold">Executive training & certification prep</h3>
+          <p class="mt-2 text-slate-600 text-sm">PMP®, PgMP®, PfMP® training with real portfolio/program casework.</p>
+          <ul class="mt-4 text-sm text-slate-700 space-y-2">
+            <li>• PMI-aligned curriculum</li>
+            <li>• Exam strategy & coaching</li>
+            <li>• Team upskilling</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="card p-6 lg:col-span-2">
+          <h3 class="text-lg font-extrabold">How I work with executives</h3>
+          <p class="mt-2 text-slate-600 text-sm">A simple, board-friendly approach focused on decisions, risk, and benefits.</p>
+          <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="action-step">
+              <div class="step">1</div>
+              <div>
+                <div class="font-bold">Diagnose</div>
+                <div class="text-sm text-slate-600">Portfolio health, governance gaps, delivery risks, adoption barriers.</div>
+              </div>
+            </div>
+            <div class="action-step">
+              <div class="step">2</div>
+              <div>
+                <div class="font-bold">Align</div>
+                <div class="text-sm text-slate-600">Decision rights, investment logic, KPIs and outcomes that matter.</div>
+              </div>
+            </div>
+            <div class="action-step">
+              <div class="step">3</div>
+              <div>
+                <div class="font-bold">Deliver</div>
+                <div class="text-sm text-slate-600">Execution cadence, change enablement, benefits realization.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card p-6">
+          <h3 class="text-lg font-extrabold">What you can expect</h3>
+          <ul class="mt-3 text-sm text-slate-700 space-y-2">
+            <li>• Clear executive reporting (no noise)</li>
+            <li>• Strong stakeholder alignment</li>
+            <li>• Risk-managed delivery</li>
+            <li>• Adoption measured, not assumed</li>
+            <li>• Benefits tracked post go‑live</li>
+          </ul>
+          <div class="mt-5 border-t border-slate-200 pt-4">
+            <button class="w-full px-4 py-2 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-extrabold" id="btnOpenContact3" type="button">Request a proposal</button>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="max-w-7xl mx-auto px-4 py-12">
-        <h2 id="section-title" class="text-4xl font-bold mb-10 text-gray-900">Executive Portfolio</h2>
-        <div id="projects-container">
-            <!-- Projects populated by JavaScript -->
+    <!-- Dashboard -->
+    <section id="dashboard" class="max-w-7xl mx-auto px-4 pb-6">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+        <div>
+          <h2 id="dashboardTitle" class="text-3xl md:text-4xl font-extrabold tracking-tight">Executive impact dashboard</h2>
+          <p class="mt-3 text-slate-600 max-w-3xl">A quick view of outcomes and leadership capabilities. Filter by focus area to see relevant highlights.</p>
         </div>
+        <div class="flex gap-2">
+          <button id="btnDownloadJson" class="px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 font-semibold" type="button">Export portfolio JSON</button>
+          <button id="btnCollapseAll" class="px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 font-bold" type="button">Collapse all</button>
+        </div>
+      </div>
+
+      <div id="dashboardSection" class="mt-8"></div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 px-4 mt-16">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-8">
-                <p class="text-xl mb-6 font-light italic">"Bridging strategy and execution to deliver measurable business value and build high-performing teams across Africa."</p>
-                <div class="flex flex-wrap justify-center gap-4 mb-6">
-                    <span class="credential-badge">PfMP® Portfolio Management</span>
-                    <span class="credential-badge">PgMP® Program Management</span>
-                    <span class="credential-badge">PMP® Project Management</span>
-                    <span class="credential-badge">MBA Project Management</span>
-                    <span class="credential-badge">DBA Strategic Management</span>
-                </div>
-            </div>
-            <div class="text-center text-sm opacity-75">
-                <p>© 2024 Nnogge Lovis Nkede. All rights reserved.</p>
-            </div>
+    <!-- Portfolio -->
+    <section id="portfolio" class="max-w-7xl mx-auto px-4 py-12">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+        <div>
+          <h2 id="sectionTitle" class="text-3xl md:text-4xl font-extrabold tracking-tight">Selected transformation outcomes</h2>
+          <p id="sectionSubtitle" class="mt-3 text-slate-600 max-w-3xl">Executive-ready case studies using the STAR structure (Situation, Task, Action, Results) with business impact highlighted.</p>
         </div>
-    </footer>
+        <div class="flex flex-col sm:flex-row gap-2">
+          <div class="relative">
+            <label for="search" class="sr-only">Search projects</label>
+            <input id="search" class="w-[min(420px,92vw)] sm:w-[360px] px-4 py-2 rounded-xl border border-slate-200 bg-white" placeholder="Search: Oracle, PMO, change, cost, adoption…" />
+          </div>
+          <select id="sort" class="px-4 py-2 rounded-xl border border-slate-200 bg-white">
+            <option value="relevance">Sort: relevance</option>
+            <option value="period_desc">Sort: period (newest)</option>
+            <option value="period_asc">Sort: period (oldest)</option>
+            <option value="kpi_desc">Sort: KPI density</option>
+          </select>
+        </div>
+      </div>
 
-    <script>
-        // Project data using STAR methodology
-        const projects = [
-            {
-                id: 1,
-                title: "Oracle ERP Digital Transformation Program",
-                organization: "Orange Cameroon SA",
-                period: "2019-2022",
-                categories: ["program-management", "digital-transformation"],
-                situation: "Orange Cameroon required modernization of legacy Oracle E-Business Suite across Finance and HCM modules to support critical GSM Billing and Mobile Money operations while achieving operational cost reduction.",
-                task: "Lead enterprise-wide migration to Oracle Cloud Fusion (Finance, HCM, Talent Management) serving 1,500+ users with zero business disruption.",
-                action: [
-                    "Deployed comprehensive ADKAR change management framework across 15+ interdependent projects",
-                    "Executed detailed stakeholder impact analysis with targeted communication strategies",
-                    "Designed and delivered 40+ technical and business training workshops",
-                    "Implemented resistance management protocols achieving 20% opposition reduction",
-                    "Managed $4.5M budget across 30-month timeline with cross-functional global teams"
-                ],
-                result: [
-                    "15% operational cost savings ($675K annually)",
-                    "90% stakeholder satisfaction rating",
-                    "30% user adoption rate increase",
-                    "40% improvement in user proficiency",
-                    "99.5% system availability post-migration",
-                    "100% on-time delivery within approved budget"
-                ]
-            },
-            {
-                id: 2,
-                title: "MTN Multi-Country Portfolio Management System",
-                organization: "Wipro/Dhanush for MTN",
-                period: "2015-2017",
-                categories: ["portfolio-management", "digital-transformation"],
-                situation: "MTN operations across Cameroon, Ghana, and Benin lacked unified portfolio visibility, resulting in budget overruns, resource conflicts, and strategic initiative delays.",
-                task: "Implement Oracle Primavera P6 EPPM enterprise-wide to optimize portfolio management for 100+ concurrent projects exceeding 300M XAF.",
-                action: [
-                    "Led full Oracle Primavera P6 EPPM implementation across 3 countries",
-                    "Integrated Primavera Unifier for capital project management and cost control",
-                    "Migrated 100+ legacy projects ensuring 100% data integrity",
-                    "Trained 200+ project managers and stakeholders on portfolio best practices",
-                    "Established PMO governance frameworks and executive reporting standards"
-                ],
-                result: [
-                    "95% system adoption rate across all countries",
-                    "70% reduction in project reporting time",
-                    "60% improvement in project planning efficiency",
-                    "Real-time portfolio visibility enabling executive decisions",
-                    "$1.2M implementation delivered on schedule",
-                    "50% reduction in resource allocation conflicts"
-                ]
-            },
-            {
-                id: 3,
-                title: "Fotabe University Strategic Transformation Portfolio",
-                organization: "Fotabe University Institute",
-                period: "2025-Present",
-                categories: ["portfolio-management", "strategic-management"],
-                situation: "As Board Member, identified critical need to transform institutional capabilities for regional competitiveness, improved graduate outcomes, and international accreditation while ensuring financial sustainability.",
-                task: "Provide strategic oversight for institutional transformation portfolio encompassing academic excellence, digital infrastructure, and operational efficiency programs aligned with 3-year strategic plan.",
-                action: [
-                    "Developed comprehensive portfolio roadmap with 2 major programs and 6 strategic projects",
-                    "Established governance framework linking Board objectives to operational KPIs",
-                    "Championed $4.3M investment in academic modernization and digital transformation",
-                    "Implemented performance monitoring tracking enrollment, retention, and employment outcomes",
-                    "Facilitated strategic industry partnerships for curriculum alignment"
-                ],
-                result: [
-                    "Target: 25% enrollment increase within 3 years",
-                    "Target: 90% graduate employment rate within 6 months",
-                    "Target: 15% operational cost reduction",
-                    "Target: 3 internationally accredited programs by 2027",
-                    "Approved $4.3M portfolio budget aligned to strategic goals",
-                    "Board-level KPI dashboard tracking 15+ strategic metrics"
-                ]
-            },
-            {
-                id: 4,
-                title: "West & Central Africa Oracle Solutions Portfolio",
-                organization: "Westcon Group",
-                period: "2011-2015",
-                categories: ["portfolio-management", "strategic-management"],
-                situation: "As Oracle Gold Partner serving West and Central Africa, needed to scale solution delivery capabilities and drive 3x revenue growth while maintaining exceptional client satisfaction.",
-                task: "Manage diverse portfolio of Oracle implementations (Database, Cloud, E-Business Suite, Fusion Middleware) across banking, government, and manufacturing sectors.",
-                action: [
-                    "Led 25+ Oracle solution projects across 6 countries in 4 years",
-                    "Architected solutions for banking database consolidation and government EBS implementations",
-                    "Built capability development program training 500+ client personnel",
-                    "Established 24/7 technical support framework reducing resolution time by 60%",
-                    "Contributed to pre-sales and solution design driving $15M+ revenue"
-                ],
-                result: [
-                    "65% sales growth over 4-year period",
-                    "95% client satisfaction rating maintained",
-                    "100% project delivery within approved timelines",
-                    "$15M in solution sales revenue generated",
-                    "500+ professionals trained with 80% certification rate",
-                    "45% infrastructure cost reduction for clients"
-                ]
-            },
-            {
-                id: 5,
-                title: "DBA Research: Market Forecasting & Strategic Analysis",
-                organization: "EMAS - Eurasian Management School",
-                period: "2024-2026",
-                categories: ["strategic-management", "dba-implementation"],
-                situation: "Organizations in volatile emerging markets struggle with incomplete competitor data and uncertain demand forecasts, leading to misallocated resources and missed growth opportunities.",
-                task: "Apply advanced strategic forecasting methodologies (MVC, DMM, MaRis analysis) to identify untapped market potential and develop risk-mitigated expansion strategies.",
-                action: [
-                    "Conducted comprehensive market audit using EMAS quantitative frameworks",
-                    "Integrated PEST, Porter's Five Forces, and SWOT for environmental scanning",
-                    "Developed scenario-based models (Main, Optimistic, Pessimistic) with projections",
-                    "Applied psychographic segmentation to identify high-value consumer clusters",
-                    "Created strategic positioning recommendations based on dominant consumer motives"
-                ],
-                result: [
-                    "Identified 25% untapped market potential in premium segments",
-                    "Quantified expansion opportunities with risk-adjusted ROI projections",
-                    "Scenario-resilient growth roadmap (base +15%, optimistic +40%)",
-                    "100% knowledge mastery in Strategic Business Analysis",
-                    "Transferable framework for fintech market entry in emerging economies"
-                ]
-            },
-            {
-                id: 6,
-                title: "DBA Research: Organizational Change & Stakeholder Alignment",
-                organization: "EMAS - Eurasian Management School",
-                period: "2024-2026",
-                categories: ["strategic-management", "dba-implementation"],
-                situation: "Large-scale organizational transformations fail 70% of the time due to resistance, misalignment, and lack of structured frameworks, resulting in wasted investments.",
-                task: "Design comprehensive change management framework using Kotter's 8-Step Model to achieve 90%+ stakeholder buy-in and minimize transformation risks.",
-                action: [
-                    "Applied Kotter's 8-Step Change Model with detailed implementation planning",
-                    "Built coalition strategies engaging key managers and informal leaders",
-                    "Designed phased implementation with 60-90 day short-term win milestones",
-                    "Developed resistance management protocols identifying supporters and resistors",
-                    "Created incentive realignment plans supporting new strategic goals"
-                ],
-                result: [
-                    "90% projected stakeholder buy-in achieved",
-                    "30% reduction in project slippage risk",
-                    "100% knowledge mastery in Advanced Change Management",
-                    "Framework validated for multi-country team expansion",
-                    "Transferable methodology for cultural shifts in growth environments"
-                ]
-            },
-            {
-                id: 7,
-                title: "DBA Research: Business Process Re-Engineering",
-                organization: "EMAS - Eurasian Management School",
-                period: "2024-2026",
-                categories: ["strategic-management", "dba-implementation"],
-                situation: "Legacy operational processes create competitive disadvantages through excessive cycle times, costs, and quality inconsistencies, limiting organizational agility.",
-                task: "Conduct fundamental business process re-engineering to achieve 35%+ cycle time reduction and operational excellence.",
-                action: [
-                    "Applied TOTE model for comprehensive 'As-Is' process audit",
-                    "Eliminated non-value-added steps and bottlenecks in critical workflows",
-                    "Designed 'To-Be' optimized processes with standardized documentation",
-                    "Created transition implementation plan with risk mitigation strategies",
-                    "Developed process maturity assessment framework for continuous improvement"
-                ],
-                result: [
-                    "35% cycle time reduction through workflow optimization",
-                    "Streamlined 'To-Be' blueprint enabling competitive superiority",
-                    "100% knowledge mastery in Business Process Engineering",
-                    "Framework enabling operational excellence in multi-country operations",
-                    "Transferable methodology for scaling processes with distributed teams"
-                ]
-            },
-            {
-                id: 8,
-                title: "DBA Research: Financial Risk Modeling & Scenario Planning",
-                organization: "EMAS - Eurasian Management School",
-                period: "2024-2026",
-                categories: ["strategic-management", "dba-implementation"],
-                situation: "Organizations face profit volatility from cost fluctuations without robust scenario-based financial models to safeguard margins and inform strategic investments.",
-                task: "Build stress-tested financial models ensuring 8%+ profit improvement under optimistic scenarios while maintaining safety buffers under worst-case conditions.",
-                action: [
-                    "Applied contribution margin analysis for accurate break-even calculations",
-                    "Calculated operating leverage and financial safety margins across scenarios",
-                    "Developed scenario-based P&L projections (Main, Optimistic, Pessimistic)",
-                    "Created ROI thresholds and risk mitigation for volatile cost environments",
-                    "Validated business valuation methods using discounted cash flow"
-                ],
-                result: [
-                    "8% profit increase projection under optimistic scenario",
-                    "Safety margins maintained under worst-case scenarios",
-                    "100% knowledge mastery in Financial & Investment Management",
-                    "Framework critical for managing country P&Ls in emerging markets",
-                    "Transferable methodology for growth investment decisions"
-                ]
-            },
-            {
-                id: 9,
-                title: "DBA Research: Corporate Culture Transformation",
-                organization: "EMAS - Eurasian Management School",
-                period: "2024-2026",
-                categories: ["strategic-management", "dba-implementation"],
-                situation: "Organizational cultures misaligned with strategic growth ambitions block performance improvements and transformation initiatives, requiring systematic intervention.",
-                task: "Diagnose current culture state and design transformation plan shifting organizational DNA to support breakthrough strategic goals with 30%+ alignment improvement.",
-                action: [
-                    "Applied Cameron & Quinn OCAI for culture typology diagnosis",
-                    "Used EMAS-Heptahedron to measure culture health and strategic fit",
-                    "Designed culture modification program targeting values, norms, and behaviors",
-                    "Created implementation initiatives with leadership accountability",
-                    "Developed metrics to track cultural transformation progress"
-                ],
-                result: [
-                    "30% increased alignment between culture and strategic goals",
-                    "Roadmap validated for shifting culture for aggressive growth",
-                    "100% knowledge mastery in Corporate Culture Transformation",
-                    "Framework for building high-performance teams in diverse environments",
-                    "Transferable methodology for cultural integration in multi-country operations"
-                ]
-            },
-            {
-                id: 10,
-                title: "DBA Research: Sales System Architecture & Revenue Growth",
-                organization: "EMAS - Eurasian Management School",
-                period: "2024-2026",
-                categories: ["strategic-management", "dba-implementation"],
-                situation: "Fragmented sales operations with inconsistent forecasting and misaligned motivation structures limit revenue predictability and growth potential.",
-                task: "Transform sales operations into self-sustaining revenue engine achieving 15%+ revenue growth through systematic sales architecture.",
-                action: [
-                    "Classified sales channels and applied ABC client prioritization",
-                    "Developed DMM-based sales forecasting models with scenario projections",
-                    "Created SMART sales goals cascaded across teams and individuals",
-                    "Designed motivation systems aligned with strategic priorities",
-                    "Built sales technology systems minimizing individual dependencies"
-                ],
-                result: [
-                    "15% projected revenue uplift through optimized architecture",
-                    "Self-sustaining sales framework operational",
-                    "100% knowledge mastery in Sales System Architecture",
-                    "Framework drives user acquisition in consumer fintech",
-                    "Transferable methodology for scaling sales in emerging markets"
-                ]
-            },
-            {
-                id: 11,
-                title: "Enterprise PMO Governance & Delivery Excellence",
-                organization: "Orange Cameroon SA",
-                period: "2018-Present",
-                categories: ["program-management", "portfolio-management"],
-                situation: "Lack of standardized project governance resulted in inconsistent delivery, poor portfolio visibility, and suboptimal resource allocation across IT and business transformation initiatives.",
-                task: "Establish enterprise PMO implementing robust governance frameworks, information systems, and reporting mechanisms to improve delivery efficiency.",
-                action: [
-                    "Designed PMO governance framework aligned with PMI standards",
-                    "Established portfolio management processes for prioritization and optimization",
-                    "Deployed integrated project reporting and analytics dashboards",
-                    "Built PMO team capabilities through training and mentoring programs",
-                    "Implemented stage-gate processes reducing project failures"
-                ],
-                result: [
-                    "20% improvement in project delivery efficiency",
-                    "90% customer satisfaction with project outcomes",
-                    "Portfolio visibility enabling executive decision-making",
-                    "Standardized methodologies across 30+ concurrent projects",
-                    "25% reduction in project overruns through proactive risk management"
-                ]
-            }
-        ];
+      <div id="projectsContainer" class="mt-8 space-y-8"></div>
+    </section>
 
-        // Dashboard configurations
-        const dashboardConfigs = {
-            'all': {
-                title: 'Executive Impact Dashboard',
-                metrics: [
-                    { icon: '📊', value: '20+', label: 'Years Executive Leadership', progress: 100 },
-                    { icon: '💼', value: '$50M+', label: 'Portfolio Value Managed', progress: 100 },
-                    { icon: '⭐', value: '90%', label: 'Stakeholder Satisfaction', progress: 90 },
-                    { icon: '🌍', value: '6+', label: 'Countries (Africa & MENA)', progress: 100 }
-                ],
-                timeline: [
-                    { label: 'Portfolio Value Delivered', value: '$50M+', width: 100 },
-                    { label: 'Stakeholder Satisfaction', value: '90%', width: 90 },
-                    { label: 'Project Success Rate', value: '95%', width: 95 },
-                    { label: 'Cost Optimization', value: '65%', width: 65 }
-                ],
-                competencies: [
-                    { title: 'Strategic Portfolio Leadership', skills: [
-                        { name: 'Portfolio Management', value: 100 },
-                        { name: 'Strategic Planning', value: 98 },
-                        { name: 'Business Modeling', value: 95 }
-                    ]},
-                    { title: 'Digital Transformation', skills: [
-                        { name: 'Change Management', value: 100 },
-                        { name: 'ERP Implementation', value: 95 },
-                        { name: 'Process Optimization', value: 92 }
-                    ]},
-                    { title: 'Executive Leadership', skills: [
-                        { name: 'Stakeholder Management', value: 100 },
-                        { name: 'Team Development', value: 95 },
-                        { name: 'Strategic Execution', value: 98 }
-                    ]}
-                ]
-            },
-            'portfolio-management': {
-                title: 'Portfolio Management Excellence',
-                metrics: [
-                    { icon: '💼', value: '$50M+', label: 'Portfolio Value', progress: 100 },
-                    { icon: '📊', value: '100+', label: 'Projects Managed', progress: 100 },
-                    { icon: '🎯', value: '95%', label: 'Strategic Alignment', progress: 95 },
-                    { icon: '⚡', value: '70%', label: 'Resource Optimization', progress: 70 }
-                ],
-                timeline: [
-                    { label: 'Portfolio Value Growth', value: '$50M+', width: 100 },
-                    { label: 'Strategic Alignment', value: '95%', width: 95 },
-                    { label: 'Portfolio Balance', value: '88%', width: 88 },
-                    { label: 'Investment Optimization', value: '85%', width: 85 }
-                ],
-                competencies: [
-                    { title: 'Strategic Alignment', skills: [
-                        { name: 'Strategic Planning', value: 98 },
-                        { name: 'Portfolio Optimization', value: 95 },
-                        { name: 'Investment Analysis', value: 92 }
-                    ]},
-                    { title: 'Governance & Risk', skills: [
-                        { name: 'Portfolio Governance', value: 100 },
-                        { name: 'Risk Management', value: 95 },
-                        { name: 'Compliance', value: 98 }
-                    ]},
-                    { title: 'Value Delivery', skills: [
-                        { name: 'Resource Allocation', value: 90 },
-                        { name: 'Benefits Tracking', value: 95 },
-                        { name: 'Performance Metrics', value: 92 }
-                    ]}
-                ]
-            },
-            'program-management': {
-                title: 'Program Management Impact',
-                metrics: [
-                    { icon: '🎯', value: '15+', label: 'Programs Led', progress: 100 },
-                    { icon: '🔄', value: '90%', label: 'Benefits Realization', progress: 90 },
-                    { icon: '📈', value: '85%', label: 'Strategic Alignment', progress: 85 },
-                    { icon: '💼', value: '$12M+', label: 'Program Budgets', progress: 95 }
-                ],
-                timeline: [
-                    { label: 'Benefits Realization', value: '90%', width: 90 },
-                    { label: 'Strategic Alignment', value: '85%', width: 85 },
-                    { label: 'Stakeholder Engagement', value: '92%', width: 92 },
-                    { label: 'Program Success', value: '88%', width: 88 }
-                ],
-                competencies: [
-                    { title: 'Strategic Benefits', skills: [
-                        { name: 'Benefits Management', value: 95 },
-                        { name: 'Strategic Alignment', value: 90 },
-                        { name: 'Value Delivery', value: 92 }
-                    ]},
-                    { title: 'Integration', skills: [
-                        { name: 'Cross-Project Coordination', value: 88 },
-                        { name: 'Dependency Management', value: 90 },
-                        { name: 'Resource Optimization', value: 85 }
-                    ]},
-                    { title: 'Governance', skills: [
-                        { name: 'Program Governance', value: 95 },
-                        { name: 'Decision Framework', value: 92 },
-                        { name: 'Risk Management', value: 90 }
-                    ]}
-                ]
-            },
-            'strategic-management': {
-                title: 'Strategic Management Excellence',
-                metrics: [
-                    { icon: '🎓', value: '100%', label: 'DBA Knowledge Mastery', progress: 100 },
-                    { icon: '📊', value: '6', label: 'Strategic Frameworks', progress: 100 },
-                    { icon: '🌍', value: '3+', label: 'Regional Markets', progress: 100 },
-                    { icon: '💼', value: '20+', label: 'Years Leadership', progress: 100 }
-                ],
-                timeline: [
-                    { label: 'Strategic Analysis', value: '100%', width: 100 },
-                    { label: 'Business Modeling', value: '100%', width: 100 },
-                    { label: 'Market Positioning', value: '95%', width: 95 },
-                    { label: 'Financial Strategy', value: '100%', width: 100 }
-                ],
-                competencies: [
-                    { title: 'Strategic Analysis', skills: [
-                        { name: 'Market Forecasting', value: 100 },
-                        { name: 'Competitor Analysis', value: 95 },
-                        { name: 'SWOT/PEST Analysis', value: 100 }
-                    ]},
-                    { title: 'Business Modeling', skills: [
-                        { name: 'Business Model Design', value: 100 },
-                        { name: 'Process Engineering', value: 100 },
-                        { name: 'Scenario Planning', value: 100 }
-                    ]},
-                    { title: 'Strategic Execution', skills: [
-                        { name: 'Change Management', value: 100 },
-                        { name: 'Goal Cascading', value: 100 },
-                        { name: 'Performance Tracking', value: 95 }
-                    ]}
-                ]
-            },
-            'digital-transformation': {
-                title: 'Digital Transformation Leadership',
-                metrics: [
-                    { icon: '🚀', value: '15%', label: 'Cost Savings Achieved', progress: 75 },
-                    { icon: '👥', value: '30%', label: 'User Adoption Increase', progress: 90 },
-                    { icon: '⚡', value: '40%', label: 'Efficiency Improvement', progress: 80 },
-                    { icon: '💻', value: '1,500+', label: 'Users Transformed', progress: 95 }
-                ],
-                timeline: [
-                    { label: 'Digital Adoption', value: '90%', width: 90 },
-                    { label: 'Process Automation', value: '85%', width: 85 },
-                    { label: 'Change Effectiveness', value: '92%', width: 92 },
-                    { label: 'Technology Integration', value: '95%', width: 95 }
-                ],
-                competencies: [
-                    { title: 'Change Leadership', skills: [
-                        { name: 'ADKAR Framework', value: 100 },
-                        { name: 'Resistance Management', value: 95 },
-                        { name: 'Communication Strategy', value: 98 }
-                    ]},
-                    { title: 'Technology Implementation', skills: [
-                        { name: 'ERP Systems', value: 95 },
-                        { name: 'Cloud Migration', value: 90 },
-                        { name: 'System Integration', value: 92 }
-                    ]},
-                    { title: 'Capability Building', skills: [
-                        { name: 'Training Design', value: 95 },
-                        { name: 'User Enablement', value: 90 },
-                        { name: 'Competency Assessment', value: 88 }
-                    ]}
-                ]
-            },
-            'dba-implementation': {
-                title: 'DBA Research & Implementation',
-                metrics: [
-                    { icon: '🎓', value: '6', label: 'Implementation Projects', progress: 100 },
-                    { icon: '📊', value: '100%', label: 'Knowledge Mastery', progress: 100 },
-                    { icon: '💡', value: '35%', label: 'Process Improvement', progress: 88 },
-                    { icon: '📈', value: '25%', label: 'Market Potential', progress: 63 }
-                ],
-                timeline: [
-                    { label: 'Strategic Analysis', value: '100%', width: 100 },
-                    { label: 'Business Modeling', value: '100%', width: 100 },
-                    { label: 'Change Management', value: '100%', width: 100 },
-                    { label: 'Financial Management', value: '100%', width: 100 }
-                ],
-                competencies: [
-                    { title: 'Strategic Frameworks', skills: [
-                        { name: 'MVC Analysis', value: 100 },
-                        { name: 'DMM Forecasting', value: 100 },
-                        { name: 'Scenario Planning', value: 100 }
-                    ]},
-                    { title: 'Business Engineering', skills: [
-                        { name: 'Process Re-Engineering', value: 100 },
-                        { name: 'Business Model Design', value: 100 },
-                        { name: 'Sales Architecture', value: 100 }
-                    ]},
-                    { title: 'Transformation', skills: [
-                        { name: 'Change Management', value: 100 },
-                        { name: 'Culture Transformation', value: 100 },
-                        { name: 'Financial Modeling', value: 100 }
-                    ]}
-                ]
-            }
-        };
+    <!-- Testimonials / proof (editable placeholders) -->
+    <section class="max-w-7xl mx-auto px-4 pb-14">
+      <div class="card p-8">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-extrabold">Board & executive references</h2>
+            <p class="mt-2 text-slate-600">Add 2–3 short quotes from executives or clients. (This section is designed to convert senior decision-makers.)</p>
+          </div>
+          <button id="btnOpenContact4" class="px-4 py-2 rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800" type="button">Request references</button>
+        </div>
 
-        // Render dashboard
-        function renderDashboard(category) {
-            const config = dashboardConfigs[category] || dashboardConfigs['all'];
-            const section = document.getElementById('dashboard-section');
-            
-            section.innerHTML = `
-                <h2 class="text-4xl font-bold mb-10 text-gray-900">${config.title}</h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-                    ${config.metrics.map(m => `
-                        <div class="metric-card card-elevated p-6">
-                            <div class="text-5xl mb-3">${m.icon}</div>
-                            <div class="impact-number mb-2">${m.value}</div>
-                            <div class="text-gray-600 font-medium mb-3 text-sm">${m.label}</div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: ${m.progress}%"></div>
-                            </div>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="kpi p-6">
+            <div class="text-sm text-slate-600">“Outcome-focused, calm under pressure, and exceptional at stakeholder alignment.”</div>
+            <div class="mt-4 text-sm font-extrabold">— Executive sponsor (placeholder)</div>
+          </div>
+          <div class="kpi p-6">
+            <div class="text-sm text-slate-600">“Built governance that improved delivery predictability and executive reporting.”</div>
+            <div class="mt-4 text-sm font-extrabold">— PMO/Transformation leader (placeholder)</div>
+          </div>
+          <div class="kpi p-6">
+            <div class="text-sm text-slate-600">“Strong change management—adoption increased significantly after go‑live.”</div>
+            <div class="mt-4 text-sm font-extrabold">— Business unit leader (placeholder)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand strategy (kept, simplified for exec readability) -->
+    <section id="brand" class="max-w-7xl mx-auto px-4 pb-16 hidden"></section>
+
+    <!-- Contact section -->
+    <section id="contact" class="max-w-7xl mx-auto px-4 pb-28">
+      <div class="card p-8">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-extrabold">Engage me</h2>
+            <p class="mt-2 text-slate-600 max-w-3xl">If you’re funding or rescuing a transformation initiative: I can quickly assess portfolio health, governance, delivery risk, and adoption—then propose a practical path to value.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill">Executive advisory</span>
+              <span class="pill">Interim PMO leadership</span>
+              <span class="pill">Program leadership</span>
+              <span class="pill">Change leadership</span>
+            </div>
+          </div>
+
+          <div class="w-full md:w-[420px] kpi p-6">
+            <div class="text-sm text-slate-500">Contact</div>
+            <div class="mt-2 space-y-2">
+              <div class="flex items-center justify-between gap-3">
+                <div class="text-sm font-bold">Email</div>
+                <a class="text-sm underline underline-offset-4" href="mailto:nnogge.lovis@gmail.com">nnogge.lovis@gmail.com</a>
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <div class="text-sm font-bold">Phone</div>
+                <a class="text-sm underline underline-offset-4" href="tel:+237699946264">+237 69994 6264</a>
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <div class="text-sm font-bold">Location</div>
+                <div class="text-sm">Douala, Cameroon</div>
+              </div>
+            </div>
+            <div class="mt-5 flex gap-2">
+              <button id="btnCopyEmail2" class="flex-1 px-4 py-2 rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800" type="button">Copy email</button>
+              <button id="btnOpenContact5" class="flex-1 px-4 py-2 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-extrabold" type="button">Request a call</button>
+            </div>
+            <p class="mt-3 text-xs text-slate-500">Tip: printing this page produces a clean executive packet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-12">
+      <div class="text-center">
+        <p class="text-lg md:text-xl font-medium italic text-white/90">“Bridging strategy and execution to deliver measurable business value and build high‑performing teams.”</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-2">
+          <span class="badge">PfMP®</span>
+          <span class="badge">PgMP®</span>
+          <span class="badge">PMP®</span>
+          <span class="badge">PMO Governance</span>
+          <span class="badge">Digital Transformation</span>
+        </div>
+        <div class="mt-8 text-sm text-white/60">© <span id="year"></span> Nnogge Lovis Nkede. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Contact modal -->
+  <div id="contactModal" class="fixed inset-0 z-[60] hidden">
+    <div class="absolute inset-0 bg-slate-950/60"></div>
+    <div class="relative min-h-full flex items-center justify-center p-4">
+      <div class="card w-[min(760px,94vw)] p-0 overflow-hidden">
+        <div class="px-6 py-5 bg-slate-900 text-white flex items-start justify-between gap-4">
+          <div>
+            <div class="text-sm text-white/70">Executive intake</div>
+            <div class="text-2xl font-extrabold">Request a call / proposal</div>
+          </div>
+          <button id="btnCloseModal" class="px-3 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10" type="button" aria-label="Close">Close</button>
+        </div>
+        <div class="p-6 grid grid-cols-1 lg:grid-cols-5 gap-6">
+          <form id="contactForm" class="lg:col-span-3 space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="text-sm font-bold" for="name">Name</label>
+                <input id="name" class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-200" placeholder="Your name" required />
+              </div>
+              <div>
+                <label class="text-sm font-bold" for="company">Company</label>
+                <input id="company" class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-200" placeholder="Organization" />
+              </div>
+            </div>
+            <div>
+              <label class="text-sm font-bold" for="email">Email</label>
+              <input id="email" type="email" class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-200" placeholder="name@company.com" required />
+            </div>
+            <div>
+              <label class="text-sm font-bold" for="topic">What do you need?</label>
+              <select id="topic" class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-200">
+                <option>Portfolio strategy & governance</option>
+                <option>PMO build / turnaround</option>
+                <option>Program leadership (ERP/cloud)</option>
+                <option>Change management & adoption</option>
+                <option>Training (PMP/PgMP/PfMP)</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-sm font-bold" for="message">Context (optional)</label>
+              <textarea id="message" rows="4" class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-200" placeholder="What outcomes are you targeting? Timeline? Stakeholders?" ></textarea>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-2">
+              <button class="px-4 py-2 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-extrabold" type="submit">Generate email</button>
+              <button id="btnCopyDraft" class="px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 font-semibold" type="button">Copy draft</button>
+            </div>
+            <p class="text-xs text-slate-500">This form does not submit to a server. It generates a ready-to-send email draft you can copy.</p>
+          </form>
+
+          <aside class="lg:col-span-2 kpi p-5">
+            <div class="text-sm font-extrabold">What leaders get</div>
+            <ul class="mt-3 text-sm text-slate-700 space-y-2">
+              <li>• A decision-ready plan in days (not months)</li>
+              <li>• Governance that reduces delivery variance</li>
+              <li>• Adoption plan with measurable KPIs</li>
+              <li>• Benefits tracking post go‑live</li>
+            </ul>
+            <div class="mt-4 border-t border-slate-200 pt-4">
+              <div class="text-xs uppercase tracking-wide text-slate-500">Email</div>
+              <div class="mt-1 font-semibold">nnogge.lovis@gmail.com</div>
+              <div class="mt-2 text-xs uppercase tracking-wide text-slate-500">Phone</div>
+              <div class="mt-1 font-semibold">+237 69994 6264</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed top-4 left-1/2 -translate-x-1/2 z-[70] hidden">
+    <div class="card px-4 py-3 flex items-center gap-3">
+      <div class="w-2.5 h-2.5 rounded-full bg-teal-500"></div>
+      <div id="toastText" class="text-sm font-semibold">Copied.</div>
+    </div>
+  </div>
+
+  <script>
+    // ------------------------------
+    // Data (unchanged content, tighter rendering)
+    // ------------------------------
+
+    const projects = [
+      {
+        id: 1,
+        title: "Oracle ERP Digital Transformation Program",
+        organization: "Orange Cameroon SA",
+        period: "2019-2022",
+        categories: ["program-management", "digital-transformation"],
+        situation: "Orange Cameroon required modernization of legacy Oracle E-Business Suite across Finance and HCM modules to support critical GSM Billing and Mobile Money operations while achieving operational cost reduction.",
+        task: "Lead enterprise-wide migration to Oracle Cloud Fusion (Finance, HCM, Talent Management) serving 1,500+ users with zero business disruption.",
+        action: [
+          "Deployed comprehensive ADKAR change management framework across 15+ interdependent projects",
+          "Executed stakeholder impact analysis with targeted communication strategies",
+          "Designed and delivered 40+ technical and business training workshops",
+          "Implemented resistance management protocols achieving 20% opposition reduction",
+          "Managed $4.5M budget across 30-month timeline with cross-functional global teams"
+        ],
+        result: [
+          "15% operational cost savings ($675K annually)",
+          "90% stakeholder satisfaction rating",
+          "30% user adoption rate increase",
+          "40% improvement in user proficiency",
+          "99.5% system availability post-migration",
+          "100% on-time delivery within approved budget"
+        ]
+      },
+      {
+        id: 2,
+        title: "MTN Multi-Country Portfolio Management System",
+        organization: "Wipro/Dhanush for MTN",
+        period: "2015-2017",
+        categories: ["portfolio-management", "digital-transformation"],
+        situation: "MTN operations across Cameroon, Ghana, and Benin lacked unified portfolio visibility, resulting in budget overruns, resource conflicts, and strategic initiative delays.",
+        task: "Implement Oracle Primavera P6 EPPM enterprise-wide to optimize portfolio management for 100+ concurrent projects exceeding 300M XAF.",
+        action: [
+          "Led Oracle Primavera P6 EPPM implementation across 3 countries",
+          "Integrated Primavera Unifier for capital project management and cost control",
+          "Migrated 100+ legacy projects ensuring data integrity",
+          "Trained 200+ project managers and stakeholders on portfolio best practices",
+          "Established PMO governance frameworks and executive reporting standards"
+        ],
+        result: [
+          "95% system adoption rate across all countries",
+          "70% reduction in project reporting time",
+          "60% improvement in project planning efficiency",
+          "Real-time portfolio visibility enabling executive decisions",
+          "$1.2M implementation delivered on schedule",
+          "50% reduction in resource allocation conflicts"
+        ]
+      },
+      {
+        id: 3,
+        title: "Fotabe University Strategic Transformation Portfolio",
+        organization: "Fotabe University Institute",
+        period: "2025-Present",
+        categories: ["portfolio-management", "strategic-management"],
+        situation: "As Board Member, identified critical need to transform institutional capabilities for regional competitiveness, improved graduate outcomes, and international accreditation while ensuring financial sustainability.",
+        task: "Provide strategic oversight for institutional transformation portfolio aligned with a 3-year strategic plan.",
+        action: [
+          "Developed portfolio roadmap with 2 major programs and 6 strategic projects",
+          "Established governance linking Board objectives to operational KPIs",
+          "Championed $4.3M investment in academic modernization and digital transformation",
+          "Implemented performance monitoring for enrollment, retention, and employment outcomes",
+          "Facilitated strategic industry partnerships for curriculum alignment"
+        ],
+        result: [
+          "Target: 25% enrollment increase within 3 years",
+          "Target: 90% graduate employment rate within 6 months",
+          "Target: 15% operational cost reduction",
+          "Target: 3 internationally accredited programs by 2027",
+          "Approved $4.3M portfolio budget aligned to strategic goals",
+          "Board-level KPI dashboard tracking 15+ strategic metrics"
+        ]
+      },
+      {
+        id: 4,
+        title: "West & Central Africa Oracle Solutions Portfolio",
+        organization: "Westcon Group",
+        period: "2011-2015",
+        categories: ["portfolio-management", "strategic-management"],
+        situation: "As Oracle Gold Partner serving West and Central Africa, needed to scale delivery capabilities and drive revenue growth while maintaining exceptional client satisfaction.",
+        task: "Manage a portfolio of Oracle implementations across banking, government, and manufacturing sectors.",
+        action: [
+          "Led 25+ Oracle solution projects across 6 countries",
+          "Architected solutions for banking consolidation and government EBS implementations",
+          "Built capability program training 500+ client personnel",
+          "Established 24/7 support framework reducing resolution time by 60%",
+          "Contributed to pre-sales and solution design driving $15M+ revenue"
+        ],
+        result: [
+          "65% sales growth over 4-year period",
+          "95% client satisfaction rating maintained",
+          "100% project delivery within approved timelines",
+          "$15M in solution sales revenue generated",
+          "500+ professionals trained with 80% certification rate",
+          "45% infrastructure cost reduction for clients"
+        ]
+      },
+      {
+        id: 5,
+        title: "DBA Implementation Project: Market Forecasting & Strategic Analysis",
+        organization: "EMAS - Eurasian Management School",
+        period: "2024-2026",
+        categories: ["strategic-management", "dba-implementation"],
+        situation: "Organizations in volatile emerging markets struggle with incomplete competitor data and uncertain demand forecasts, leading to misallocated resources and missed growth opportunities.",
+        task: "Apply strategic forecasting methodologies to identify untapped market potential and develop risk-mitigated expansion strategies.",
+        action: [
+          "Conducted market audit using quantitative frameworks",
+          "Integrated PEST, Porter's Five Forces, and SWOT",
+          "Developed scenario models with projections",
+          "Applied psychographic segmentation to identify high-value clusters",
+          "Created strategic positioning recommendations"
+        ],
+        result: [
+          "Identified 25% untapped market potential in premium segments",
+          "Quantified opportunities with risk-adjusted ROI projections",
+          "Scenario-resilient growth roadmap (base +15%, optimistic +40%)",
+          "Transferable framework for fintech market entry in emerging economies"
+        ]
+      },
+      {
+        id: 6,
+        title: "DBA Implementation Project: Organizational Change & Stakeholder Alignment",
+        organization: "EMAS - Eurasian Management School",
+        period: "2024-2026",
+        categories: ["strategic-management", "dba-implementation"],
+        situation: "Large-scale transformations fail due to resistance, misalignment, and lack of structured frameworks.",
+        task: "Design a change management framework to achieve 90%+ stakeholder buy-in and minimize transformation risks.",
+        action: [
+          "Applied Kotter's 8-Step Model with implementation planning",
+          "Built coalition strategies engaging formal and informal leaders",
+          "Designed phased implementation with short-term wins",
+          "Developed resistance management protocols",
+          "Created incentive realignment plans supporting strategic goals"
+        ],
+        result: [
+          "90% projected stakeholder buy-in achieved",
+          "30% reduction in project slippage risk",
+          "Framework validated for multi-country expansion",
+          "Transferable methodology for cultural shifts in growth environments"
+        ]
+      },
+      {
+        id: 7,
+        title: "DBA Implementation: Business Process Re-Engineering",
+        organization: "EMAS - Eurasian Management School",
+        period: "2024-2026",
+        categories: ["strategic-management", "dba-implementation"],
+        situation: "Legacy operational processes create competitive disadvantages through excessive cycle times and costs.",
+        task: "Conduct business process re-engineering to achieve 35%+ cycle time reduction.",
+        action: [
+          "Applied TOTE model for 'As-Is' process audit",
+          "Eliminated non-value-added steps and bottlenecks",
+          "Designed 'To-Be' optimized processes with documentation",
+          "Created transition plan with risk mitigations",
+          "Developed process maturity assessment framework"
+        ],
+        result: [
+          "35% cycle time reduction through workflow optimization",
+          "Optimized 'To-Be' blueprint enabling competitive superiority",
+          "Framework enabling operational excellence in multi-country operations"
+        ]
+      },
+      {
+        id: 8,
+        title: "DBA Implementation Project: Financial Risk Modeling & Scenario Planning",
+        organization: "EMAS - Eurasian Management School",
+        period: "2024-2026",
+        categories: ["strategic-management", "dba-implementation"],
+        situation: "Organizations face profit volatility from cost fluctuations without stress-tested financial models.",
+        task: "Build scenario-based models ensuring profit improvement under optimistic scenarios while maintaining buffers under worst case.",
+        action: [
+          "Applied contribution margin analysis and break-even calculations",
+          "Calculated operating leverage and safety margins",
+          "Developed scenario-based P&L projections",
+          "Created ROI thresholds and risk mitigation",
+          "Validated valuation using discounted cash flow"
+        ],
+        result: [
+          "8% profit increase projection under optimistic scenario",
+          "Safety margins maintained under worst-case scenarios",
+          "Framework critical for managing country P&Ls in emerging markets"
+        ]
+      },
+      {
+        id: 9,
+        title: "DBA Implementation Project: Corporate Culture Transformation",
+        organization: "EMAS - Eurasian Management School",
+        period: "2024-2026",
+        categories: ["strategic-management", "dba-implementation"],
+        situation: "Cultures misaligned with strategy block performance improvements and transformation initiatives.",
+        task: "Diagnose current culture and design a transformation plan improving alignment by 30%+.",
+        action: [
+          "Applied OCAI for culture typology diagnosis",
+          "Used EMAS-Heptahedron to measure culture health",
+          "Designed culture modification program",
+          "Created initiatives with leadership accountability",
+          "Developed metrics to track cultural transformation"
+        ],
+        result: [
+          "30% increased alignment between culture and strategic goals",
+          "Roadmap validated for shifting culture for aggressive growth",
+          "Framework for building high-performance teams in diverse environments"
+        ]
+      },
+      {
+        id: 10,
+        title: "DBA Implementation Project: Sales System Architecture & Revenue Growth",
+        organization: "EMAS - Eurasian Management School",
+        period: "2024-2026",
+        categories: ["strategic-management", "dba-implementation"],
+        situation: "Fragmented sales operations limit revenue predictability and growth potential.",
+        task: "Transform sales operations into a revenue engine achieving 15%+ growth through systematic sales architecture.",
+        action: [
+          "Classified sales channels and applied ABC prioritization",
+          "Developed forecasting models with scenario projections",
+          "Created SMART sales goals cascaded across teams",
+          "Designed motivation systems aligned with strategy",
+          "Built sales technology systems minimizing dependencies"
+        ],
+        result: [
+          "15% projected revenue uplift through optimized architecture",
+          "Self-sustaining sales framework operational",
+          "Transferable methodology for scaling sales in emerging markets"
+        ]
+      },
+      {
+        id: 11,
+        title: "Enterprise PMO Governance & Delivery Excellence",
+        organization: "Orange Cameroon SA",
+        period: "2018-Present",
+        categories: ["program-management", "portfolio-management"],
+        situation: "Lack of standardized project governance resulted in inconsistent delivery and limited portfolio visibility.",
+        task: "Establish an enterprise PMO with governance frameworks, reporting mechanisms, and delivery standards.",
+        action: [
+          "Designed PMO governance aligned with PMI standards",
+          "Established portfolio processes for prioritization and optimization",
+          "Deployed integrated reporting and analytics dashboards",
+          "Built PMO capability through training and mentoring",
+          "Implemented stage-gate processes reducing project failures"
+        ],
+        result: [
+          "20% improvement in project delivery efficiency",
+          "90% customer satisfaction with project outcomes",
+          "Standardized methodologies across 30+ concurrent projects",
+          "25% reduction in project overruns through proactive risk management"
+        ]
+      }
+    ];
+
+    const dashboardConfigs = {
+      overview: {
+        title: 'Executive impact dashboard',
+        metrics: [
+          { value: '20+', label: 'Years leadership & delivery', progress: 100 },
+          { value: '$50M+', label: 'Portfolio value managed', progress: 100 },
+          { value: '90%', label: 'Stakeholder satisfaction', progress: 90 },
+          { value: '6+', label: 'Countries delivered', progress: 100 }
+        ],
+        tracks: [
+          { label: 'Portfolio value delivered', value: '$50M+', width: 100 },
+          { label: 'Project success rate', value: '95%', width: 95 },
+          { label: 'Change effectiveness', value: '92%', width: 92 },
+          { label: 'Cost optimization', value: '65%', width: 65 }
+        ],
+        competencies: [
+          { title: 'Portfolio leadership', skills: [
+            { name: 'Portfolio governance', value: 100 },
+            { name: 'Strategic alignment', value: 98 },
+            { name: 'Benefits tracking', value: 95 }
+          ]},
+          { title: 'Digital transformation', skills: [
+            { name: 'Change leadership', value: 100 },
+            { name: 'ERP implementation', value: 95 },
+            { name: 'Process optimization', value: 92 }
+          ]},
+          { title: 'Executive leadership', skills: [
+            { name: 'Stakeholder management', value: 100 },
+            { name: 'Decision facilitation', value: 95 },
+            { name: 'Delivery governance', value: 98 }
+          ]}
+        ]
+      },
+      'portfolio-management': {
+        title: 'Portfolio leadership',
+        metrics: [
+          { value: '$50M+', label: 'Portfolio value', progress: 100 },
+          { value: '100+', label: 'Projects governed', progress: 100 },
+          { value: '95%', label: 'Strategic alignment', progress: 95 },
+          { value: '70%', label: 'Resource optimization', progress: 70 }
+        ],
+        tracks: [
+          { label: 'Strategic alignment', value: '95%', width: 95 },
+          { label: 'Portfolio balance', value: '88%', width: 88 },
+          { label: 'Investment optimization', value: '85%', width: 85 },
+          { label: 'Reporting efficiency', value: '70%', width: 70 }
+        ],
+        competencies: [
+          { title: 'Governance & steering', skills: [
+            { name: 'Decision frameworks', value: 95 },
+            { name: 'Stage-gates', value: 98 },
+            { name: 'Risk oversight', value: 95 }
+          ]},
+          { title: 'Value management', skills: [
+            { name: 'Benefits realization', value: 95 },
+            { name: 'Investment cases', value: 92 },
+            { name: 'KPI dashboards', value: 95 }
+          ]},
+          { title: 'Operating model', skills: [
+            { name: 'PMO design', value: 100 },
+            { name: 'Resource planning', value: 90 },
+            { name: 'Capability building', value: 95 }
+          ]}
+        ]
+      },
+      'program-management': {
+        title: 'Program delivery',
+        metrics: [
+          { value: '15+', label: 'Programs led', progress: 100 },
+          { value: '$12M+', label: 'Budgets managed', progress: 95 },
+          { value: '90%', label: 'Benefits realization', progress: 90 },
+          { value: '92%', label: 'Stakeholder engagement', progress: 92 }
+        ],
+        tracks: [
+          { label: 'Benefits realization', value: '90%', width: 90 },
+          { label: 'Integration management', value: '88%', width: 88 },
+          { label: 'Governance maturity', value: '92%', width: 92 },
+          { label: 'Delivery predictability', value: '88%', width: 88 }
+        ],
+        competencies: [
+          { title: 'Program integration', skills: [
+            { name: 'Dependency mgmt', value: 90 },
+            { name: 'Cross-team coordination', value: 88 },
+            { name: 'Roadmap management', value: 92 }
+          ]},
+          { title: 'Value delivery', skills: [
+            { name: 'Benefits planning', value: 95 },
+            { name: 'Scope control', value: 90 },
+            { name: 'Risk management', value: 90 }
+          ]},
+          { title: 'Executive communication', skills: [
+            { name: 'Steerco packs', value: 95 },
+            { name: 'Stakeholder alignment', value: 100 },
+            { name: 'Decision facilitation', value: 95 }
+          ]}
+        ]
+      },
+      'strategic-management': {
+        title: 'Strategy & modeling',
+        metrics: [
+          { value: 'DBA', label: 'Strategic management research', progress: 100 },
+          { value: '6+', label: 'Strategic frameworks applied', progress: 100 },
+          { value: '3+', label: 'Markets modeled', progress: 100 },
+          { value: '15%+', label: 'Growth scenarios built', progress: 85 }
+        ],
+        tracks: [
+          { label: 'Strategic analysis depth', value: '100%', width: 100 },
+          { label: 'Business modeling', value: '100%', width: 100 },
+          { label: 'Scenario planning', value: '100%', width: 100 },
+          { label: 'Risk-adjusted ROI', value: '92%', width: 92 }
+        ],
+        competencies: [
+          { title: 'Strategic analysis', skills: [
+            { name: 'Market forecasting', value: 100 },
+            { name: 'Competitive strategy', value: 95 },
+            { name: 'SWOT/PEST', value: 100 }
+          ]},
+          { title: 'Business engineering', skills: [
+            { name: 'Process redesign', value: 100 },
+            { name: 'Operating models', value: 95 },
+            { name: 'Metrics systems', value: 95 }
+          ]},
+          { title: 'Execution readiness', skills: [
+            { name: 'Change enablement', value: 100 },
+            { name: 'Goal cascading', value: 100 },
+            { name: 'Governance design', value: 98 }
+          ]}
+        ]
+      },
+      'digital-transformation': {
+        title: 'Digital transformation',
+        metrics: [
+          { value: '1,500+', label: 'Users enabled', progress: 95 },
+          { value: '15%', label: 'Cost savings achieved', progress: 75 },
+          { value: '30%', label: 'Adoption uplift', progress: 90 },
+          { value: '40%', label: 'Efficiency improvement', progress: 80 }
+        ],
+        tracks: [
+          { label: 'Adoption', value: '90%', width: 90 },
+          { label: 'Process automation', value: '85%', width: 85 },
+          { label: 'Change effectiveness', value: '92%', width: 92 },
+          { label: 'Integration quality', value: '95%', width: 95 }
+        ],
+        competencies: [
+          { title: 'Change leadership', skills: [
+            { name: 'ADKAR', value: 100 },
+            { name: 'Resistance mgmt', value: 95 },
+            { name: 'Communication strategy', value: 98 }
+          ]},
+          { title: 'Technology delivery', skills: [
+            { name: 'ERP systems', value: 95 },
+            { name: 'Cloud migration', value: 90 },
+            { name: 'System integration', value: 92 }
+          ]},
+          { title: 'Capability building', skills: [
+            { name: 'Training design', value: 95 },
+            { name: 'User enablement', value: 90 },
+            { name: 'Competency assessment', value: 88 }
+          ]}
+        ]
+      },
+      'dba-implementation': {
+        title: 'DBA Implementation Project (implementation focus)',
+        metrics: [
+          { value: '6', label: 'Implementation projects', progress: 100 },
+          { value: '100%', label: 'Knowledge mastery', progress: 100 },
+          { value: '35%', label: 'Process improvement', progress: 88 },
+          { value: '25%', label: 'Market potential identified', progress: 63 }
+        ],
+        tracks: [
+          { label: 'Strategic analysis', value: '100%', width: 100 },
+          { label: 'Business modeling', value: '100%', width: 100 },
+          { label: 'Change management', value: '100%', width: 100 },
+          { label: 'Financial management', value: '100%', width: 100 }
+        ],
+        competencies: [
+          { title: 'Strategic frameworks', skills: [
+            { name: 'MVC analysis', value: 100 },
+            { name: 'DMM forecasting', value: 100 },
+            { name: 'Scenario planning', value: 100 }
+          ]},
+          { title: 'Business engineering', skills: [
+            { name: 'Process redesign', value: 100 },
+            { name: 'Business model design', value: 100 },
+            { name: 'Sales architecture', value: 100 }
+          ]},
+          { title: 'Transformation', skills: [
+            { name: 'Change mgmt', value: 100 },
+            { name: 'Culture transformation', value: 100 },
+            { name: 'Financial modeling', value: 100 }
+          ]}
+        ]
+      }
+    };
+
+    // ------------------------------
+    // Utilities
+    // ------------------------------
+
+    const $ = (sel, root=document) => root.querySelector(sel);
+    const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+
+    function toast(msg){
+      const t = $('#toast');
+      $('#toastText').textContent = msg;
+      t.classList.remove('hidden');
+      clearTimeout(toast._t);
+      toast._t = setTimeout(() => t.classList.add('hidden'), 2200);
+    }
+
+    function extractPercentage(text){
+      const m = String(text).match(/(\d+(?:\.\d+)?)%/);
+      return m ? Math.round(parseFloat(m[1])) : null;
+    }
+
+    function periodToSortKey(period){
+      // Accept formats: "2019-2022", "2018-Present", "2025-Present"
+      const p = String(period);
+      const parts = p.split('-').map(s => s.trim());
+      const start = parseInt(parts[0], 10) || 0;
+      let end = parts[1] ? parts[1].toLowerCase() : '';
+      const endYear = end.includes('present') ? 9999 : (parseInt(parts[1], 10) || start);
+      return { start, end: endYear };
+    }
+
+    function kpiDensity(project){
+      return (project.result || []).reduce((acc, r) => acc + (extractPercentage(r) !== null ? 1 : 0), 0);
+    }
+
+    function escapeHtml(str){
+      return String(str)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+
+    // ------------------------------
+    // Rendering
+    // ------------------------------
+
+    function renderDashboard(viewKey){
+      const key = viewKey === 'overview' ? 'overview' : viewKey;
+      const cfg = dashboardConfigs[key] || dashboardConfigs.overview;
+      $('#dashboardTitle').textContent = cfg.title;
+
+      $('#dashboardSection').innerHTML = `
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          ${cfg.metrics.map(m => `
+            <div class="card p-6">
+              <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">${escapeHtml(m.label)}</div>
+              <div class="mt-2 text-3xl font-extrabold">${escapeHtml(m.value)}</div>
+              <div class="mt-4 progress"><div data-progress="${m.progress}"></div></div>
+            </div>
+          `).join('')}
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div class="card p-6 lg:col-span-2">
+            <div class="flex items-center justify-between gap-4">
+              <h3 class="text-lg font-extrabold">Key executive metrics</h3>
+              <div class="text-xs text-slate-500">Operationalized through governance + adoption</div>
+            </div>
+            <div class="mt-4 space-y-3">
+              ${cfg.tracks.map(t => `
+                <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
+                  <div class="flex items-center justify-between gap-4">
+                    <div class="font-bold">${escapeHtml(t.label)}</div>
+                    <div class="font-extrabold text-teal-700">${escapeHtml(t.value)}</div>
+                  </div>
+                  <div class="mt-3 progress"><div data-progress="${t.width}"></div></div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="text-lg font-extrabold">Leadership capabilities</h3>
+            <p class="mt-2 text-sm text-slate-600">Capabilities shown through delivery outcomes across contexts.</p>
+            <div class="mt-4 space-y-4">
+              ${cfg.competencies.map(c => `
+                <div>
+                  <div class="font-extrabold">${escapeHtml(c.title)}</div>
+                  <div class="mt-2 space-y-2">
+                    ${c.skills.map(s => `
+                      <div>
+                        <div class="flex items-center justify-between text-sm">
+                          <span class="font-semibold text-slate-700">${escapeHtml(s.name)}</span>
+                          <span class="font-extrabold text-teal-700">${s.value}%</span>
                         </div>
+                        <div class="mt-1 progress"><div data-progress="${s.value}"></div></div>
+                      </div>
                     `).join('')}
+                  </div>
                 </div>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      `;
 
-                <div class="card-elevated p-8 mb-10">
-                    <h3 class="text-2xl font-bold mb-6 text-gray-900">Key Performance Metrics</h3>
-                    <div class="space-y-3">
-                        ${config.timeline.map(t => `
-                            <div class="competency-bar" style="width: ${t.width}%">
-                                <div class="competency-label">${t.label}</div>
-                                <div class="competency-value">${t.value}</div>
-                            </div>
-                        `).join('')}
-                    </div>
+      animateProgressBars();
+    }
+
+    function renderProjects(list, metaText){
+      const container = $('#projectsContainer');
+      if (!list.length){
+        container.innerHTML = `<div class="card p-8 text-slate-600">No items match your filter/search.</div>`;
+        return;
+      }
+
+      const meta = metaText ? `
+        <div class="card p-6">
+          <div class="text-sm text-slate-600">${escapeHtml(metaText)}</div>
+        </div>
+      ` : '';
+
+      container.innerHTML = meta + list.map(p => renderProjectCard(p)).join('');
+    }
+
+    function renderProjectCard(project){
+      const kpis = (project.result || [])
+        .map(r => ({ pct: extractPercentage(r), text: r }))
+        .filter(x => x.pct !== null)
+        .slice(0, 4);
+
+      const categories = (project.categories || []).map(c => `<span class="badge">${escapeHtml(c.replaceAll('-', ' '))}</span>`).join('');
+
+      const id = `proj-${project.id}`;
+
+      return `
+        <article class="card p-7" id="${id}">
+          <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+            <div class="flex-1">
+              <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight">${escapeHtml(project.title)}</h3>
+              <div class="mt-3 flex flex-wrap gap-2">${categories}</div>
+              <div class="mt-3 text-slate-600 font-semibold">${escapeHtml(project.organization)} <span class="text-slate-400">•</span> ${escapeHtml(project.period)}</div>
+            </div>
+            <div class="lg:w-[320px]">
+              <div class="kpi p-5">
+                <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">Executive impact</div>
+                <div class="mt-3 space-y-2">
+                  ${(project.result || []).slice(0, 3).map(r => `<div class="text-sm font-semibold text-slate-800">• ${escapeHtml(r)}</div>`).join('')}
                 </div>
+              </div>
+            </div>
+          </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    ${config.competencies.map(c => `
-                        <div class="card-elevated p-6">
-                            <h4 class="font-bold text-lg mb-5 text-gray-900">${c.title}</h4>
-                            <div class="space-y-4">
-                                ${c.skills.map(s => `
-                                    <div>
-                                        <div class="flex justify-between text-sm mb-2 font-medium">
-                                            <span class="text-gray-700">${s.name}</span>
-                                            <span class="text-teal-700">${s.value}%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: ${s.value}%"></div>
-                                        </div>
-                                    </div>
-                                `).join('')}
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-        }
+          ${kpis.length ? `
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+            ${kpis.map(k => `
+              <div class="kpi p-5">
+                <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">KPI</div>
+                <div class="mt-2 text-3xl font-extrabold">${k.pct}%</div>
+                <div class="mt-3 progress"><div data-progress="${Math.min(k.pct,100)}"></div></div>
+                <div class="mt-3 text-xs text-slate-600" title="${escapeHtml(k.text)}">${escapeHtml(k.text.length > 62 ? k.text.slice(0,62) + '…' : k.text)}</div>
+              </div>
+            `).join('')}
+          </div>
+          ` : ''}
 
-        // Extract metrics
-        function extractPercentage(text) {
-            const match = text.match(/(\d+)%/);
-            return match ? parseInt(match[1]) : null;
-        }
+          <div class="mt-8 space-y-8">
+            <div class="divider">
+              <h4 class="text-lg font-extrabold">Situation</h4>
+              <p class="mt-2 text-slate-700 leading-relaxed">${escapeHtml(project.situation)}</p>
+            </div>
 
-        // Render projects
-        function renderProjects(filtered, countText = '') {
-            const container = document.getElementById('projects-container');
-            
-            if (filtered.length === 0) {
-                container.innerHTML = '<div class="text-center py-16 text-gray-500">No projects found in this category.</div>';
-                return;
-            }
+            <div class="divider">
+              <h4 class="text-lg font-extrabold">Task</h4>
+              <p class="mt-2 text-slate-700 leading-relaxed">${escapeHtml(project.task)}</p>
+            </div>
 
-            let html = '';
-            
-            if (countText) {
-                html += `
-                    <div class="mb-8 p-6 card-elevated border-l-4 border-teal-600">
-                        <p class="text-gray-800 font-semibold text-lg">
-                            <span class="text-2xl mr-2">📊</span>${countText}
-                        </p>
+            <div class="divider">
+              <div class="flex items-center justify-between gap-4">
+                <h4 class="text-lg font-extrabold">Action</h4>
+                <button class="nav-btn" type="button" data-collapse="${id}">Collapse</button>
+              </div>
+              <div class="mt-4 space-y-3" data-collapsible="${id}">
+                ${(project.action || []).map((a, i) => `
+                  <div class="action-step">
+                    <div class="step">${i+1}</div>
+                    <div class="text-slate-700 leading-relaxed">${escapeHtml(a)}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <div class="divider">
+              <h4 class="text-lg font-extrabold">Results & business impact</h4>
+              <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                ${(project.result || []).map(r => {
+                  const pct = extractPercentage(r);
+                  return `
+                    <div class="kpi p-5">
+                      <div class="text-sm font-semibold text-slate-800">${escapeHtml(r)}</div>
+                      ${pct !== null ? `<div class="mt-3 progress"><div data-progress="${Math.min(pct,100)}"></div></div>` : ''}
                     </div>
-                `;
-            }
+                  `;
+                }).join('')}
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+    }
 
-            filtered.forEach(project => {
-                const keyMetrics = project.result
-                    .map(r => ({ percentage: extractPercentage(r), text: r }))
-                    .filter(m => m.percentage !== null)
-                    .slice(0, 4);
+    function renderBrand(){
+      const el = $('#brand');
+      el.innerHTML = `
+        <div class="card p-8">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+            <div>
+              <h2 class="text-2xl md:text-3xl font-extrabold">Brand strategy (executive-friendly)</h2>
+              <p class="mt-2 text-slate-600 max-w-3xl">A concise positioning framework to communicate value to boards, C‑suite, and investors.</p>
+            </div>
+            <a href="#contact" class="px-4 py-2 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-extrabold">Use this positioning</a>
+          </div>
 
-                html += `
-                    <div class="card-elevated p-8 mb-10">
-                        <div class="mb-8">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-3">${project.title}</h3>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                ${project.categories.map(c => `
-                                    <span class="credential-badge text-xs">${c.replace('-', ' ').toUpperCase()}</span>
-                                `).join('')}
-                            </div>
-                            <p class="text-gray-600 text-lg font-medium">
-                                <strong>${project.organization}</strong> | ${project.period}
-                            </p>
-                        </div>
+          <div class="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="kpi p-6">
+              <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">Core promise</div>
+              <div class="mt-2 text-lg font-extrabold">Strategic alignment that turns transformation into business value.</div>
+              <p class="mt-2 text-sm text-slate-600">Not just delivery—governance, adoption, and benefits realization.</p>
+            </div>
+            <div class="kpi p-6">
+              <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">Differentiators</div>
+              <ul class="mt-3 text-sm text-slate-700 space-y-2">
+                <li>• PfMP® + PgMP® + PMP® credibility</li>
+                <li>• Multi-country execution experience</li>
+                <li>• Strong change management depth</li>
+                <li>• Board-level governance orientation</li>
+              </ul>
+            </div>
+            <div class="kpi p-6">
+              <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">Ideal engagements</div>
+              <ul class="mt-3 text-sm text-slate-700 space-y-2">
+                <li>• ERP/cloud migration programs</li>
+                <li>• PMO creation or turnaround</li>
+                <li>• Portfolio prioritization & funding</li>
+                <li>• Adoption turnaround post go‑live</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      `;
+    }
 
-                        ${keyMetrics.length > 0 ? `
-                        <div class="mb-8 p-6 bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg">
-                            <h5 class="text-sm font-bold text-gray-800 mb-4 uppercase tracking-wide">Key Performance Indicators</h5>
-                            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                                ${keyMetrics.map(m => `
-                                    <div class="text-center">
-                                        <div class="stat-circle mx-auto mb-3" style="background: conic-gradient(#0d9488 ${m.percentage * 3.6}deg, #e5e7eb ${m.percentage * 3.6}deg);">
-                                            <div class="stat-circle bg-white" style="width: 110px; height: 110px;">
-                                                <span class="text-3xl font-bold text-gray-900">${m.percentage}%</span>
-                                            </div>
-                                        </div>
-                                        <p class="text-xs text-gray-600 font-medium px-2" title="${m.text}">${m.text.substring(0, 40)}${m.text.length > 40 ? '...' : ''}</p>
-                                    </div>
-                                `).join('')}
-                            </div>
-                        </div>
-                        ` : ''}
+    function animateProgressBars(){
+      // Trigger only visible progress bars; safe for repeated calls.
+      requestAnimationFrame(() => {
+        $$('[data-progress]').forEach(bar => {
+          const pct = Math.max(0, Math.min(100, parseInt(bar.getAttribute('data-progress') || '0', 10)));
+          bar.style.width = pct + '%';
+        });
+      });
+    }
 
-                        <div class="space-y-8">
-                            <div class="section-divider">
-                                <h4 class="font-bold text-xl text-gray-900 mb-3">🎯 SITUATION</h4>
-                                <p class="text-gray-700 leading-relaxed">${project.situation}</p>
-                            </div>
+    // ------------------------------
+    // State + filtering/search/sort
+    // ------------------------------
 
-                            <div class="section-divider">
-                                <h4 class="font-bold text-xl text-gray-900 mb-3">📋 TASK</h4>
-                                <p class="text-gray-700 leading-relaxed">${project.task}</p>
-                            </div>
+    const state = {
+      view: 'overview',
+      search: '',
+      sort: 'relevance'
+    };
 
-                            <div class="section-divider">
-                                <h4 class="font-bold text-xl text-gray-900 mb-4">⚡ ACTION</h4>
-                                <div class="space-y-3">
-                                    ${project.action.map((item, idx) => `
-                                        <div class="action-step">
-                                            <div class="step-number">${idx + 1}</div>
-                                            <p class="text-gray-700 flex-1 leading-relaxed pt-1">${item}</p>
-                                        </div>
-                                    `).join('')}
-                                </div>
-                            </div>
+    function viewToTitle(view){
+      const map = {
+        overview: 'Selected transformation outcomes',
+        'portfolio-management': 'Portfolio leadership outcomes',
+        'program-management': 'Program delivery outcomes',
+        'strategic-management': 'Strategy & business modeling outcomes',
+        'digital-transformation': 'Digital transformation outcomes',
+        'dba-implementation': 'DBA research & implementation outcomes',
+      };
+      return map[view] || 'Selected transformation outcomes';
+    }
 
-                            <div class="section-divider">
-                                <h4 class="font-bold text-xl text-gray-900 mb-4">🏆 RESULTS & BUSINESS IMPACT</h4>
-                                <div class="kpi-grid">
-                                    ${project.result.map(item => {
-                                        const pct = extractPercentage(item);
-                                        return `
-                                            <div class="kpi-card">
-                                                <p class="text-gray-800 font-semibold mb-3">${item}</p>
-                                                ${pct !== null ? `
-                                                <div class="progress-bar">
-                                                    <div class="progress-fill" style="width: ${Math.min(pct, 100)}%"></div>
-                                                </div>
-                                                ` : ''}
-                                            </div>
-                                        `;
-                                    }).join('')}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            });
+    function computeVisibleProjects(){
+      let list = [...projects];
+      if (state.view !== 'overview' && state.view !== 'brand'){
+        list = list.filter(p => (p.categories || []).includes(state.view));
+      }
 
-            container.innerHTML = html;
-        }
+      const q = state.search.trim().toLowerCase();
+      if (q){
+        list = list.filter(p => {
+          const hay = [p.title, p.organization, p.period, ...(p.categories||[]), p.situation, p.task, ...(p.action||[]), ...(p.result||[])].join(' ').toLowerCase();
+          return hay.includes(q);
+        });
+      }
 
-        // Personal brand wheel
-        function showPersonalBrand() {
-            document.querySelectorAll('.nav-button').forEach(b => b.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            document.getElementById('section-title').textContent = 'Personal Brand Strategy';
-            document.getElementById('dashboard-section').innerHTML = '';
-            
-            document.getElementById('projects-container').innerHTML = `
-                <div class="mb-8 p-6 card-elevated border-l-4 border-yellow-600">
-                    <p class="text-gray-800 font-semibold text-lg">
-                        <span class="text-2xl mr-2">🎯</span>Personal Brand Wheel - Strategic Framework
-                    </p>
-                </div>
-
-                <div class="brand-wheel-container">
-                    <div class="brand-wheel">
-                        <div class="wheel-spoke spoke-1"></div>
-                        <div class="wheel-spoke spoke-2"></div>
-                        <div class="wheel-spoke spoke-3"></div>
-                        <div class="wheel-spoke spoke-4"></div>
-                        <div class="wheel-spoke spoke-5"></div>
-                        
-                        <div class="wheel-segment segment-core">
-                            <div class="segment-content">
-                                <h4>🎯 CORE ESSENCE</h4>
-                                <ul>
-                                    <li>Leading PMI certification training (PMP®, PgMP®, PfMP®)</li>
-                                    <li>Executive digital transformation pathways</li>
-                                    <li>Continental digital advancement enabler</li>
-                                    <li>Strategic alignment authority</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="wheel-segment segment-personality">
-                            <div class="segment-content">
-                                <h4>👤 PERSONALITY</h4>
-                                <ul>
-                                    <li>💡 Visionary - Digital transformation leader</li>
-                                    <li>🤝 Empowering - Knowledge transfer focus</li>
-                                    <li>📊 Strategic - Long-term thinking</li>
-                                    <li>🎓 Scholarly - DBA research + practice</li>
-                                    <li>🚀 Transformational - Measurable change</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="wheel-segment segment-values">
-                            <div class="segment-content">
-                                <h4>💎 VALUES</h4>
-                                <ul>
-                                    <li>Excellence through continuous learning</li>
-                                    <li>Strategic thinking & governance</li>
-                                    <li>Inclusive leadership</li>
-                                    <li>Knowledge sharing</li>
-                                    <li>Sustainable innovation</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="wheel-segment segment-benefits">
-                            <div class="segment-content">
-                                <h4>🎁 BENEFITS</h4>
-                                <ul>
-                                    <li>World-class PMI certification training</li>
-                                    <li>Strategic Alignment Model</li>
-                                    <li>Executive-level mentorship</li>
-                                    <li>Pan-African networks</li>
-                                    <li>DBA methodologies</li>
-                                    <li>Career acceleration paths</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="wheel-segment segment-attributes">
-                            <div class="segment-content">
-                                <h4>⭐ ATTRIBUTES</h4>
-                                <ul>
-                                    <li>🎯 Executive presence</li>
-                                    <li>🎓 Academic distinction</li>
-                                    <li>📢 Thought leadership</li>
-                                    <li>💻 Technology mastery</li>
-                                    <li>🌍 Continental reach</li>
-                                    <li>🏆 Innovation showcase</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="brand-wheel-center">
-                            <h3 class="text-2xl font-bold text-white mb-3">NNOGGE LOVIS NKEDE</h3>
-                            <div class="text-yellow-400 text-xl font-bold mb-3 italic">"Strategic Alignment. Continental Impact."</div>
-                            <p class="text-white text-sm opacity-90">Personal Brand Framework</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-                    <div class="card-elevated p-8">
-                        <h3 class="text-2xl font-bold mb-6 text-gray-900">🚀 Immediate Actions</h3>
-                        <div class="space-y-3">
-                            <div class="action-step">
-                                <div class="step-number">1</div>
-                                <p class="text-gray-700 flex-1">Launch quarterly research publications on Strategic Alignment</p>
-                            </div>
-                            <div class="action-step">
-                                <div class="step-number">2</div>
-                                <p class="text-gray-700 flex-1">Develop signature keynote on Digital Transformation Leadership</p>
-                            </div>
-                            <div class="action-step">
-                                <div class="step-number">3</div>
-                                <p class="text-gray-700 flex-1">Publish monthly LinkedIn articles on PMI best practices</p>
-                            </div>
-                            <div class="action-step">
-                                <div class="step-number">4</div>
-                                <p class="text-gray-700 flex-1">Establish "Nnogge PMI Excellence Academy"</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card-elevated p-8">
-                        <h3 class="text-2xl font-bold mb-6 text-gray-900">🎯 Long-Term Vision</h3>
-                        <div class="timeline-container">
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-line"></div>
-                                <div>
-                                    <h4 class="font-bold text-gray-900 mb-1">Years 1-2</h4>
-                                    <p class="text-gray-700 text-sm">Establish continental recognition as premier PMI authority</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-line"></div>
-                                <div>
-                                    <h4 class="font-bold text-gray-900 mb-1">Years 3-4</h4>
-                                    <p class="text-gray-700 text-sm">Launch pan-African consulting platform and publish research book</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <div>
-                                    <h4 class="font-bold text-gray-900 mb-1">Year 5+</h4>
-                                    <p class="text-gray-700 text-sm">Transition to Chief Transformation Officer or board-level roles</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }
-
-        // Filter projects
-        function filterProjects(category) {
-            document.querySelectorAll('.nav-button').forEach(b => b.classList.remove('active'));
-            event.target.classList.add('active');
-
-            const titles = {
-                'all': 'Executive Portfolio Overview',
-                'portfolio-management': 'Portfolio Management Leadership',
-                'program-management': 'Program Management Excellence',
-                'strategic-management': 'Strategic Management Achievements',
-                'digital-transformation': 'Digital Transformation Leadership',
-                'dba-implementation': 'DBA Research & Implementation'
+      if (state.sort === 'period_desc'){
+        list.sort((a,b) => periodToSortKey(b.period).end - periodToSortKey(a.period).end);
+      } else if (state.sort === 'period_asc'){
+        list.sort((a,b) => periodToSortKey(a.period).start - periodToSortKey(b.period).start);
+      } else if (state.sort === 'kpi_desc'){
+        list.sort((a,b) => kpiDensity(b) - kpiDensity(a));
+      } else {
+        // relevance: keep original order but slightly bias if search
+        if (q){
+          list.sort((a,b) => {
+            const score = (p) => {
+              const t = (p.title||'').toLowerCase();
+              const o = (p.organization||'').toLowerCase();
+              let s = 0;
+              if (t.includes(q)) s += 5;
+              if (o.includes(q)) s += 3;
+              s += ((p.result||[]).join(' ').toLowerCase().includes(q) ? 2 : 0);
+              s += ((p.action||[]).join(' ').toLowerCase().includes(q) ? 1 : 0);
+              return s;
             };
-
-            document.getElementById('section-title').textContent = titles[category] || 'Portfolio';
-            renderDashboard(category);
-
-            const filtered = category === 'all' ? projects : projects.filter(p => p.categories.includes(category));
-            const count = category === 'all' 
-                ? `Showcasing ${filtered.length} strategic initiatives across the portfolio` 
-                : `${filtered.length} project${filtered.length !== 1 ? 's' : ''} in ${titles[category]}`;
-            
-            renderProjects(filtered, count);
+            return score(b) - score(a);
+          });
         }
+      }
 
-        // Initialize
-        renderDashboard('all');
-        renderProjects(projects);
-    </script>
+      return list;
+    }
+
+    function refresh(){
+      // Brand view uses separate section
+      if (state.view === 'brand'){
+        $('#brand').classList.remove('hidden');
+        $('#portfolio').classList.add('hidden');
+        $('#dashboard').classList.add('hidden');
+        renderBrand();
+        return;
+      }
+
+      $('#brand').classList.add('hidden');
+      $('#portfolio').classList.remove('hidden');
+      $('#dashboard').classList.remove('hidden');
+
+      // Dashboard
+      renderDashboard(state.view);
+
+      // Titles
+      $('#sectionTitle').textContent = viewToTitle(state.view);
+      const list = computeVisibleProjects();
+      const scopeLabel = state.view === 'overview' ? 'full portfolio' : state.view.replaceAll('-', ' ');
+      const meta = `Showing ${list.length} item${list.length!==1?'s':''} (${scopeLabel})` + (state.search.trim() ? ` • filtered by “${state.search.trim()}”` : '');
+      renderProjects(list, meta);
+      animateProgressBars();
+      wireCollapseButtons();
+    }
+
+    function setActiveNav(view){
+      $$('.nav-btn[data-view]').forEach(btn => {
+        const isActive = btn.getAttribute('data-view') === view;
+        btn.setAttribute('aria-current', isActive ? 'true' : 'false');
+      });
+    }
+
+    function wireCollapseButtons(){
+      $$('[data-collapse]').forEach(btn => {
+        btn.onclick = () => {
+          const id = btn.getAttribute('data-collapse');
+          const panel = document.querySelector(`[data-collapsible="${id}"]`);
+          if (!panel) return;
+          const hidden = panel.classList.toggle('hidden');
+          btn.textContent = hidden ? 'Expand' : 'Collapse';
+        };
+      });
+    }
+
+    function collapseAll(){
+      $$('[data-collapsible]').forEach(panel => panel.classList.add('hidden'));
+      $$('[data-collapse]').forEach(btn => btn.textContent = 'Expand');
+      toast('All actions collapsed.');
+    }
+
+    // ------------------------------
+    // Contact modal + helpers
+    // ------------------------------
+
+    function openModal(){
+      $('#contactModal').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+      setTimeout(() => $('#name')?.focus(), 0);
+    }
+
+    function closeModal(){
+      $('#contactModal').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    async function copyText(text){
+      try{
+        await navigator.clipboard.writeText(text);
+        toast('Copied to clipboard.');
+      } catch {
+        // Fallback
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+        toast('Copied to clipboard.');
+      }
+    }
+
+    function buildEmailDraft(){
+      const name = $('#name').value.trim();
+      const company = $('#company').value.trim();
+      const email = $('#email').value.trim();
+      const topic = $('#topic').value;
+      const msg = $('#message').value.trim();
+
+      const subject = `Executive brief request: ${topic}`;
+      const lines = [
+        `Hello Lovis,`,
+        ``,
+        `I’m ${name || '[Name]'}${company ? ` from ${company}` : ''}. We’d like to discuss support for: ${topic}.`,
+        ``,
+        `Outcomes we are targeting:`,
+        `- [Outcome 1]`,
+        `- [Outcome 2]`,
+        `- [Outcome 3]`,
+        ``,
+        `Timeline / constraints:`,
+        `- [Timeline]`,
+        `- [Constraints]`,
+        ``,
+        msg ? `Additional context: ${msg}` : `Additional context: [Optional]`,
+        ``,
+        `Please propose next steps and an engagement approach.`,
+        ``,
+        `${name || '[Name]'}${email ? ` (${email})` : ''}`
+      ];
+
+      return { subject, body: lines.join('\n') };
+    }
+
+    // ------------------------------
+    // Events
+    // ------------------------------
+
+    // Nav
+    $$('.nav-btn[data-view]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        state.view = btn.getAttribute('data-view');
+        setActiveNav(state.view);
+        refresh();
+        if (state.view === 'brand') location.hash = '#brand';
+      });
+    });
+
+    // Search + sort
+    $('#search').addEventListener('input', (e) => {
+      state.search = e.target.value;
+      refresh();
+    });
+    $('#sort').addEventListener('change', (e) => {
+      state.sort = e.target.value;
+      refresh();
+    });
+
+    // Buttons
+    $('#btnCollapseAll').addEventListener('click', collapseAll);
+    $('#btnDownloadJson').addEventListener('click', () => {
+      const data = { generatedAt: new Date().toISOString(), projects };
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'nnogge-portfolio.json';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+      toast('Portfolio JSON downloaded.');
+    });
+
+    function wireCTAs(){
+      [
+        '#btnOpenContact', '#btnOpenContact2', '#btnOpenContact3', '#btnOpenContact4', '#btnOpenContact5', '#btnPrimaryCTA'
+      ].forEach(id => {
+        const el = $(id);
+        if (el) el.addEventListener('click', openModal);
+      });
+    }
+
+    wireCTAs();
+
+    $('#btnCloseModal').addEventListener('click', closeModal);
+    $('#contactModal').addEventListener('click', (e) => {
+      if (e.target === $('#contactModal') || e.target === $('#contactModal').firstElementChild) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !$('#contactModal').classList.contains('hidden')) closeModal();
+    });
+
+    $('#btnCopyEmail').addEventListener('click', () => copyText('nnogge.lovis@gmail.com'));
+    $('#btnCopyEmail2').addEventListener('click', () => copyText('nnogge.lovis@gmail.com'));
+
+    $('#btnPrint').addEventListener('click', () => window.print());
+
+    let lastDraft = '';
+
+    $('#contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const draft = buildEmailDraft();
+      lastDraft = `Subject: ${draft.subject}\n\n${draft.body}`;
+      copyText(lastDraft);
+      const mailto = `mailto:nnogge.lovis@gmail.com?subject=${encodeURIComponent(draft.subject)}&body=${encodeURIComponent(draft.body)}`;
+      window.open(mailto, '_blank');
+    });
+
+    $('#btnCopyDraft').addEventListener('click', () => {
+      if (!lastDraft){
+        const draft = buildEmailDraft();
+        lastDraft = `Subject: ${draft.subject}\n\n${draft.body}`;
+      }
+      copyText(lastDraft);
+    });
+
+    // Init
+    $('#year').textContent = new Date().getFullYear();
+    setActiveNav('overview');
+    renderDashboard('overview');
+    renderProjects(projects, `Showing ${projects.length} items (full portfolio)`);
+    animateProgressBars();
+    wireCollapseButtons();
+
+    // If hash is brand, open it
+    if (location.hash === '#brand'){
+      state.view = 'brand';
+      setActiveNav('brand');
+      refresh();
+    }
+  </script>
 </body>
 </html>
