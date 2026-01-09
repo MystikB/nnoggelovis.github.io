@@ -6,11 +6,12 @@
   <title>Nnogge Lovis Nkede | Executive Portfolio | Portfolio Leadership & Digital Transformation</title>
   <meta name="description" content="Executive portfolio of Nnogge Lovis Nkede (MBA PM, PfMP®, PgMP®, PMP®) — strategic portfolio leadership, PMO governance, and digital transformation delivering measurable business outcomes." />
   <meta name="theme-color" content="#0f172a" />
-
   <!-- Open Graph -->
   <meta property="og:title" content="Nnogge Lovis Nkede | Executive Portfolio" />
   <meta property="og:description" content="Strategic portfolio leadership, PMO governance & digital transformation delivering measurable business outcomes." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230b1220'/%3E%3Cstop offset='1' stop-color='%2314b8a6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='630' fill='url(%23g)'/%3E%3Ctext x='60' y='210' fill='white' font-family='Inter,Arial' font-size='64' font-weight='800'%3ENnogge Lovis Nkede%3C/text%3E%3Ctext x='60' y='290' fill='white' opacity='0.85' font-family='Inter,Arial' font-size='34' font-weight='600'%3EStrategy %E2%86%92 Execution %E2%86%92 Measurable Value%3C/text%3E%3Ctext x='60' y='360' fill='white' opacity='0.75' font-family='Inter,Arial' font-size='26'%3EExecutive Portfolio %7C PMO Governance %7C Digital Transformation%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230d9488'/%3E%3Cstop offset='1' stop-color='%2314b8a6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230b1220'/%3E%3Cpath d='M18 44V20h6l14 16V20h6v24h-6L24 28v16h-6z' fill='url(%23g)'/%3E%3C/svg%3E" />
 
   <!-- Tailwind CDN (required) -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -50,6 +51,7 @@
       box-shadow: 0 10px 25px rgba(2, 6, 23, 0.06);
       transition: transform .25s ease, box-shadow .25s ease;
     }
+
     .card:hover{ transform: translateY(-3px); box-shadow: 0 18px 40px rgba(2, 6, 23, 0.10); }
 
     .badge{
@@ -87,7 +89,9 @@
       color: rgba(2,6,23,.88);
       transition: all .18s ease;
     }
+
     .nav-btn:hover{ transform: translateY(-1px); background: rgba(15,23,42,.03); }
+
     .nav-btn[aria-current="true"]{
       color:#fff;
       border-color: rgba(13,148,136,.55);
@@ -107,18 +111,28 @@
     .divider{ border-left: 4px solid var(--teal); padding-left: 1.2rem; }
 
     .action-step{
-      display:flex; gap: 1rem; align-items: flex-start;
+      display:flex;
+      gap: 1rem;
+      align-items: flex-start;
       padding: 1rem;
       border-radius: 12px;
       background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
       border: 1px solid rgba(15,23,42,.08);
       transition: transform .18s ease, background .18s ease;
     }
+
     .action-step:hover{ transform: translateX(4px); background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); }
+
     .step{
-      width: 34px; height: 34px; border-radius: 999px;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
       background: linear-gradient(135deg, var(--teal) 0%, var(--teal2) 100%);
-      color:#fff; font-weight: 800; display:flex; align-items:center; justify-content:center;
+      color:#fff;
+      font-weight: 800;
+      display:flex;
+      align-items:center;
+      justify-content:center;
       box-shadow: 0 12px 22px rgba(13,148,136,.22);
       flex-shrink: 0;
     }
@@ -133,6 +147,33 @@
       white-space: normal !important;
     }
 
+    /* Executive polish */
+    :focus-visible{ outline: 3px solid rgba(20,184,166,.45); outline-offset: 3px; border-radius: 12px; }
+
+    /* Reveal animations */
+    .reveal{ opacity: 0; transform: translateY(10px); transition: opacity 650ms ease, transform 650ms ease; }
+    .reveal.show{ opacity: 1; transform: translateY(0); }
+
+    /* Sticky nav shadow on scroll */
+    .nav-elevated{ box-shadow: 0 10px 25px rgba(2,6,23,.08); }
+
+    /* Mobile nav overflow: horizontal scroll with subtle fade */
+    .nav-scroller{ -webkit-overflow-scrolling: touch; }
+    .nav-scroller::-webkit-scrollbar{ height: 8px; }
+    .nav-scroller::-webkit-scrollbar-thumb{ background: rgba(15,23,42,.18); border-radius: 999px; }
+    .nav-fade{
+      mask-image: linear-gradient(90deg, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+      -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+    }
+
+    /* Floating utilities */
+    .floating-btn{
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(15,23,42,.10);
+      box-shadow: 0 16px 35px rgba(2,6,23,.10);
+      backdrop-filter: blur(10px);
+    }
+
     @media (prefers-reduced-motion: reduce){
       html{ scroll-behavior:auto; }
       .card, .nav-btn, .action-step{ transition: none; }
@@ -145,6 +186,100 @@
       body{ background:#fff !important; }
       .card{ box-shadow:none !important; }
     }
+
+
+    /* Brand wheel (executive visual) */
+    .bw-shell{
+      background:
+        radial-gradient(900px 420px at 20% 10%, rgba(20,184,166,.10), transparent 60%),
+        radial-gradient(700px 420px at 85% 5%, rgba(212,175,55,.10), transparent 55%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    }
+
+    .bw-hero{
+      background:
+        radial-gradient(900px 420px at 25% 0%, rgba(20,184,166,.18), transparent 60%),
+        radial-gradient(700px 380px at 85% 0%, rgba(212,175,55,.14), transparent 60%),
+        linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #111b34 100%);
+    }
+
+    .bw-chip{
+      border: 1px solid rgba(15,23,42,.12);
+      background: rgba(255,255,255,.9);
+      border-radius: 999px;
+      padding: .4rem .7rem;
+      font-size: .8rem;
+      font-weight: 700;
+      color: rgba(2,6,23,.85);
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+      user-select:none;
+      white-space: nowrap;
+    }
+
+    .bw-chip:hover{ transform: translateY(-1px); background: rgba(248,250,252,1); }
+
+    .bw-chip[aria-pressed="true"]{
+      color:#fff;
+      border-color: rgba(13,148,136,.55);
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal2) 100%);
+      box-shadow: 0 12px 24px rgba(13,148,136,.22);
+    }
+
+    .wheel-wrap{
+      position: relative;
+      border-radius: 22px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border: 1px solid rgba(15,23,42,.08);
+      overflow:hidden;
+    }
+
+    .wheel-canvas{
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+      display:block;
+    }
+
+    .wheel-seg{ cursor:pointer; transition: opacity .15s ease, transform .15s ease; transform-origin: 50% 50%; }
+    .wheel-seg:hover{ opacity: .96; }
+    .wheel-seg.active{ filter: drop-shadow(0 18px 28px rgba(2,6,23,.20)); }
+
+    .wheel-center{
+      position:absolute;
+      inset: 0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      pointer-events:none;
+    }
+
+    .wheel-center > div{
+      width: min(68%, 280px);
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: linear-gradient(135deg, rgba(11,18,32,.92) 0%, rgba(15,23,42,.92) 100%);
+      box-shadow: 0 24px 60px rgba(2,6,23,.35);
+      color:#fff;
+      padding: 18px 18px;
+      text-align:center;
+    }
+
+    .wheel-center .title{ font-weight: 900; letter-spacing: -.02em; }
+    .wheel-center .sub{ color: rgba(255,255,255,.78); font-weight: 600; font-size: .9rem; }
+
+    .detail-list li{ position: relative; padding-left: 1.1rem; }
+    .detail-list li::before{
+      content: "";
+      position:absolute;
+      left: .1rem;
+      top: .6rem;
+      width: .45rem;
+      height: .45rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal2) 100%);
+      box-shadow: 0 10px 18px rgba(13,148,136,.25);
+    }
+
   </style>
 </head>
 
@@ -187,7 +322,7 @@
 
           <div class="mt-6 flex flex-wrap gap-2">
             <span class="pill">Douala, Cameroon</span>
-            <span class="pill">Africa & MENA delivery</span>
+            <span class="pill">Africa & MEA delivery</span>
             <span class="pill">ERP / Cloud / Change</span>
             <span class="pill">Portfolio value managed: $50M+</span>
           </div>
@@ -267,25 +402,34 @@
   </header>
 
   <!-- Navigation -->
-  <nav class="bg-white/90 backdrop-blur border-b border-slate-200 sticky top-0 z-40">
+  <nav id="topNav" class="bg-white/90 backdrop-blur border-b border-slate-200 sticky top-0 z-40">
     <div class="max-w-7xl mx-auto px-4 py-3">
-      <div class="flex flex-wrap items-center justify-between gap-3">
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-xl bg-slate-900 text-white flex items-center justify-center font-extrabold">NL</div>
-          <div class="text-sm">
-            <div class="font-extrabold leading-tight">Executive Portfolio</div>
-            <div class="text-slate-500 leading-tight">Strategy → Execution → Adoption</div>
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+        <div class="flex items-center justify-between gap-3">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-xl bg-slate-900 text-white flex items-center justify-center font-extrabold">NL</div>
+            <div class="text-sm">
+              <div class="font-extrabold leading-tight">Executive Portfolio</div>
+              <div class="text-slate-500 leading-tight">Strategy → Execution → Adoption</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 lg:hidden">
+            <a href="#contact" class="nav-btn">Engage</a>
           </div>
         </div>
 
-        <div class="flex flex-wrap gap-2">
-          <button class="nav-btn" data-view="overview" aria-current="true" type="button">Overview</button>
-          <button class="nav-btn" data-view="portfolio-management" type="button">Portfolio leadership</button>
-          <button class="nav-btn" data-view="program-management" type="button">Program delivery</button>
-          <button class="nav-btn" data-view="strategic-management" type="button">Strategy & modeling</button>
-          <button class="nav-btn" data-view="digital-transformation" type="button">Digital transformation</button>
-          <button class="nav-btn" data-view="dba-implementation" type="button">DBA Implementation Project</button>
-          <button class="nav-btn" data-view="brand" type="button">Brand strategy</button>
+        <div class="nav-scroller nav-fade overflow-x-auto pb-1">
+          <div class="flex flex-nowrap gap-2 min-w-max">
+            <button class="nav-btn" data-view="overview" aria-current="true" type="button">Overview</button>
+            <button class="nav-btn" data-view="portfolio-management" type="button">Portfolio leadership</button>
+            <button class="nav-btn" data-view="program-management" type="button">Program delivery</button>
+            <button class="nav-btn" data-view="strategic-management" type="button">Strategy & modeling</button>
+            <button class="nav-btn" data-view="digital-transformation" type="button">Digital transformation</button>
+            <button class="nav-btn" data-view="dba-implementation" type="button">DBA Implementation Project</button>
+            <button class="nav-btn" data-view="brand" type="button">Brand strategy</button>
+            <button class="nav-btn" data-view="brand-wheel" type="button">Personal brand wheel</button>
+          </div>
         </div>
       </div>
     </div>
@@ -293,7 +437,7 @@
 
   <main id="main">
     <!-- Services -->
-    <section id="services" class="max-w-7xl mx-auto px-4 py-12">
+    <section id="services" class="max-w-7xl mx-auto px-4 py-12 reveal">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <div>
           <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Services leaders hire me for</h2>
@@ -394,7 +538,7 @@
     </section>
 
     <!-- Dashboard -->
-    <section id="dashboard" class="max-w-7xl mx-auto px-4 pb-6">
+    <section id="dashboard" class="max-w-7xl mx-auto px-4 pb-6 reveal">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <div>
           <h2 id="dashboardTitle" class="text-3xl md:text-4xl font-extrabold tracking-tight">Executive impact dashboard</h2>
@@ -410,7 +554,7 @@
     </section>
 
     <!-- Portfolio -->
-    <section id="portfolio" class="max-w-7xl mx-auto px-4 py-12">
+    <section id="portfolio" class="max-w-7xl mx-auto px-4 py-12 reveal">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <div>
           <h2 id="sectionTitle" class="text-3xl md:text-4xl font-extrabold tracking-tight">Selected transformation outcomes</h2>
@@ -461,11 +605,14 @@
       </div>
     </section>
 
-    <!-- Brand strategy (kept, simplified for exec readability) -->
+    <!-- Brand strategy -->
     <section id="brand" class="max-w-7xl mx-auto px-4 pb-16 hidden"></section>
 
+    <!-- Personal brand wheel -->
+    <section id="brandWheel" class="max-w-7xl mx-auto px-4 pb-16 hidden"></section>
+
     <!-- Contact section -->
-    <section id="contact" class="max-w-7xl mx-auto px-4 pb-28">
+    <section id="contact" class="max-w-7xl mx-auto px-4 pb-28 reveal">
       <div class="card p-8">
         <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           <div>
@@ -563,7 +710,7 @@
             </div>
             <div>
               <label class="text-sm font-bold" for="message">Context (optional)</label>
-              <textarea id="message" rows="4" class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-200" placeholder="What outcomes are you targeting? Timeline? Stakeholders?" ></textarea>
+              <textarea id="message" rows="4" class="mt-1 w-full px-4 py-2 rounded-xl border border-slate-200" placeholder="What outcomes are you targeting? Timeline? Stakeholders?"></textarea>
             </div>
             <div class="flex flex-col sm:flex-row gap-2">
               <button class="px-4 py-2 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-extrabold" type="submit">Generate email</button>
@@ -600,11 +747,16 @@
     </div>
   </div>
 
+  <!-- Floating utilities -->
+  <div class="no-print fixed right-4 bottom-[92px] z-50 flex flex-col gap-2">
+    <button id="btnBackToTop" type="button" class="floating-btn px-3 py-2 rounded-xl text-sm font-extrabold text-slate-900 hidden">Back to top</button>
+    <button id="btnDownloadPdf" type="button" class="floating-btn px-3 py-2 rounded-xl text-sm font-extrabold text-slate-900">Download PDF</button>
+  </div>
+
   <script>
     // ------------------------------
-    // Data (unchanged content, tighter rendering)
+    // Data
     // ------------------------------
-
     const projects = [
       {
         id: 1,
@@ -870,21 +1022,9 @@
           { label: 'Cost optimization', value: '65%', width: 65 }
         ],
         competencies: [
-          { title: 'Portfolio leadership', skills: [
-            { name: 'Portfolio governance', value: 100 },
-            { name: 'Strategic alignment', value: 98 },
-            { name: 'Benefits tracking', value: 95 }
-          ]},
-          { title: 'Digital transformation', skills: [
-            { name: 'Change leadership', value: 100 },
-            { name: 'ERP implementation', value: 95 },
-            { name: 'Process optimization', value: 92 }
-          ]},
-          { title: 'Executive leadership', skills: [
-            { name: 'Stakeholder management', value: 100 },
-            { name: 'Decision facilitation', value: 95 },
-            { name: 'Delivery governance', value: 98 }
-          ]}
+          { title: 'Portfolio leadership', skills: [ { name: 'Portfolio governance', value: 100 }, { name: 'Strategic alignment', value: 98 }, { name: 'Benefits tracking', value: 95 } ]},
+          { title: 'Digital transformation', skills: [ { name: 'Change leadership', value: 100 }, { name: 'ERP implementation', value: 95 }, { name: 'Process optimization', value: 92 } ]},
+          { title: 'Executive leadership', skills: [ { name: 'Stakeholder management', value: 100 }, { name: 'Decision facilitation', value: 95 }, { name: 'Delivery governance', value: 98 } ]}
         ]
       },
       'portfolio-management': {
@@ -902,21 +1042,9 @@
           { label: 'Reporting efficiency', value: '70%', width: 70 }
         ],
         competencies: [
-          { title: 'Governance & steering', skills: [
-            { name: 'Decision frameworks', value: 95 },
-            { name: 'Stage-gates', value: 98 },
-            { name: 'Risk oversight', value: 95 }
-          ]},
-          { title: 'Value management', skills: [
-            { name: 'Benefits realization', value: 95 },
-            { name: 'Investment cases', value: 92 },
-            { name: 'KPI dashboards', value: 95 }
-          ]},
-          { title: 'Operating model', skills: [
-            { name: 'PMO design', value: 100 },
-            { name: 'Resource planning', value: 90 },
-            { name: 'Capability building', value: 95 }
-          ]}
+          { title: 'Governance & steering', skills: [ { name: 'Decision frameworks', value: 95 }, { name: 'Stage-gates', value: 98 }, { name: 'Risk oversight', value: 95 } ]},
+          { title: 'Value management', skills: [ { name: 'Benefits realization', value: 95 }, { name: 'Investment cases', value: 92 }, { name: 'KPI dashboards', value: 95 } ]},
+          { title: 'Operating model', skills: [ { name: 'PMO design', value: 100 }, { name: 'Resource planning', value: 90 }, { name: 'Capability building', value: 95 } ]}
         ]
       },
       'program-management': {
@@ -934,21 +1062,9 @@
           { label: 'Delivery predictability', value: '88%', width: 88 }
         ],
         competencies: [
-          { title: 'Program integration', skills: [
-            { name: 'Dependency mgmt', value: 90 },
-            { name: 'Cross-team coordination', value: 88 },
-            { name: 'Roadmap management', value: 92 }
-          ]},
-          { title: 'Value delivery', skills: [
-            { name: 'Benefits planning', value: 95 },
-            { name: 'Scope control', value: 90 },
-            { name: 'Risk management', value: 90 }
-          ]},
-          { title: 'Executive communication', skills: [
-            { name: 'Steerco packs', value: 95 },
-            { name: 'Stakeholder alignment', value: 100 },
-            { name: 'Decision facilitation', value: 95 }
-          ]}
+          { title: 'Program integration', skills: [ { name: 'Dependency mgmt', value: 90 }, { name: 'Cross-team coordination', value: 88 }, { name: 'Roadmap management', value: 92 } ]},
+          { title: 'Value delivery', skills: [ { name: 'Benefits planning', value: 95 }, { name: 'Scope control', value: 90 }, { name: 'Risk management', value: 90 } ]},
+          { title: 'Executive communication', skills: [ { name: 'Steerco packs', value: 95 }, { name: 'Stakeholder alignment', value: 100 }, { name: 'Decision facilitation', value: 95 } ]}
         ]
       },
       'strategic-management': {
@@ -966,21 +1082,9 @@
           { label: 'Risk-adjusted ROI', value: '92%', width: 92 }
         ],
         competencies: [
-          { title: 'Strategic analysis', skills: [
-            { name: 'Market forecasting', value: 100 },
-            { name: 'Competitive strategy', value: 95 },
-            { name: 'SWOT/PEST', value: 100 }
-          ]},
-          { title: 'Business engineering', skills: [
-            { name: 'Process redesign', value: 100 },
-            { name: 'Operating models', value: 95 },
-            { name: 'Metrics systems', value: 95 }
-          ]},
-          { title: 'Execution readiness', skills: [
-            { name: 'Change enablement', value: 100 },
-            { name: 'Goal cascading', value: 100 },
-            { name: 'Governance design', value: 98 }
-          ]}
+          { title: 'Strategic analysis', skills: [ { name: 'Market forecasting', value: 100 }, { name: 'Competitive strategy', value: 95 }, { name: 'SWOT/PEST', value: 100 } ]},
+          { title: 'Business engineering', skills: [ { name: 'Process redesign', value: 100 }, { name: 'Operating models', value: 95 }, { name: 'Metrics systems', value: 95 } ]},
+          { title: 'Execution readiness', skills: [ { name: 'Change enablement', value: 100 }, { name: 'Goal cascading', value: 100 }, { name: 'Governance design', value: 98 } ]}
         ]
       },
       'digital-transformation': {
@@ -998,21 +1102,9 @@
           { label: 'Integration quality', value: '95%', width: 95 }
         ],
         competencies: [
-          { title: 'Change leadership', skills: [
-            { name: 'ADKAR', value: 100 },
-            { name: 'Resistance mgmt', value: 95 },
-            { name: 'Communication strategy', value: 98 }
-          ]},
-          { title: 'Technology delivery', skills: [
-            { name: 'ERP systems', value: 95 },
-            { name: 'Cloud migration', value: 90 },
-            { name: 'System integration', value: 92 }
-          ]},
-          { title: 'Capability building', skills: [
-            { name: 'Training design', value: 95 },
-            { name: 'User enablement', value: 90 },
-            { name: 'Competency assessment', value: 88 }
-          ]}
+          { title: 'Change leadership', skills: [ { name: 'ADKAR', value: 100 }, { name: 'Resistance mgmt', value: 95 }, { name: 'Communication strategy', value: 98 } ]},
+          { title: 'Technology delivery', skills: [ { name: 'ERP systems', value: 95 }, { name: 'Cloud migration', value: 90 }, { name: 'System integration', value: 92 } ]},
+          { title: 'Capability building', skills: [ { name: 'Training design', value: 95 }, { name: 'User enablement', value: 90 }, { name: 'Competency assessment', value: 88 } ]}
         ]
       },
       'dba-implementation': {
@@ -1030,21 +1122,9 @@
           { label: 'Financial management', value: '100%', width: 100 }
         ],
         competencies: [
-          { title: 'Strategic frameworks', skills: [
-            { name: 'MVC analysis', value: 100 },
-            { name: 'DMM forecasting', value: 100 },
-            { name: 'Scenario planning', value: 100 }
-          ]},
-          { title: 'Business engineering', skills: [
-            { name: 'Process redesign', value: 100 },
-            { name: 'Business model design', value: 100 },
-            { name: 'Sales architecture', value: 100 }
-          ]},
-          { title: 'Transformation', skills: [
-            { name: 'Change mgmt', value: 100 },
-            { name: 'Culture transformation', value: 100 },
-            { name: 'Financial modeling', value: 100 }
-          ]}
+          { title: 'Strategic frameworks', skills: [ { name: 'MVC analysis', value: 100 }, { name: 'DMM forecasting', value: 100 }, { name: 'Scenario planning', value: 100 } ]},
+          { title: 'Business engineering', skills: [ { name: 'Process redesign', value: 100 }, { name: 'Business model design', value: 100 }, { name: 'Sales architecture', value: 100 } ]},
+          { title: 'Transformation', skills: [ { name: 'Change mgmt', value: 100 }, { name: 'Culture transformation', value: 100 }, { name: 'Financial modeling', value: 100 } ]}
         ]
       }
     };
@@ -1052,7 +1132,6 @@
     // ------------------------------
     // Utilities
     // ------------------------------
-
     const $ = (sel, root=document) => root.querySelector(sel);
     const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
 
@@ -1095,6 +1174,14 @@
     // ------------------------------
     // Rendering
     // ------------------------------
+    function animateProgressBars(){
+      requestAnimationFrame(() => {
+        $$('[data-progress]').forEach(bar => {
+          const pct = Math.max(0, Math.min(100, parseInt(bar.getAttribute('data-progress') || '0', 10)));
+          bar.style.width = pct + '%';
+        });
+      });
+    }
 
     function renderDashboard(viewKey){
       const key = viewKey === 'overview' ? 'overview' : viewKey;
@@ -1165,7 +1252,6 @@
         container.innerHTML = `<div class="card p-8 text-slate-600">No items match your filter/search.</div>`;
         return;
       }
-
       const meta = metaText ? `
         <div class="card p-6">
           <div class="text-sm text-slate-600">${escapeHtml(metaText)}</div>
@@ -1182,7 +1268,6 @@
         .slice(0, 4);
 
       const categories = (project.categories || []).map(c => `<span class="badge">${escapeHtml(c.replaceAll('-', ' '))}</span>`).join('');
-
       const id = `proj-${project.id}`;
 
       return `
@@ -1196,24 +1281,22 @@
             <div class="lg:w-[320px]">
               <div class="kpi p-5">
                 <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">Executive impact</div>
-                <div class="mt-3 space-y-2">
-                  ${(project.result || []).slice(0, 3).map(r => `<div class="text-sm font-semibold text-slate-800">• ${escapeHtml(r)}</div>`).join('')}
-                </div>
+                <div class="mt-3 space-y-2">${(project.result || []).slice(0, 3).map(r => `<div class="text-sm font-semibold text-slate-800">• ${escapeHtml(r)}</div>`).join('')}</div>
               </div>
             </div>
           </div>
 
           ${kpis.length ? `
-          <div class="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
-            ${kpis.map(k => `
-              <div class="kpi p-5">
-                <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">KPI</div>
-                <div class="mt-2 text-3xl font-extrabold">${k.pct}%</div>
-                <div class="mt-3 progress"><div data-progress="${Math.min(k.pct,100)}"></div></div>
-                <div class="mt-3 text-xs text-slate-600" title="${escapeHtml(k.text)}">${escapeHtml(k.text.length > 62 ? k.text.slice(0,62) + '…' : k.text)}</div>
-              </div>
-            `).join('')}
-          </div>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+              ${kpis.map(k => `
+                <div class="kpi p-5">
+                  <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">KPI</div>
+                  <div class="mt-2 text-3xl font-extrabold">${k.pct}%</div>
+                  <div class="mt-3 progress"><div data-progress="${Math.min(k.pct,100)}"></div></div>
+                  <div class="mt-3 text-xs text-slate-600" title="${escapeHtml(k.text)}">${escapeHtml(k.text.length > 62 ? k.text.slice(0,62) + '…' : k.text)}</div>
+                </div>
+              `).join('')}
+            </div>
           ` : ''}
 
           <div class="mt-8 space-y-8">
@@ -1221,12 +1304,10 @@
               <h4 class="text-lg font-extrabold">Situation</h4>
               <p class="mt-2 text-slate-700 leading-relaxed">${escapeHtml(project.situation)}</p>
             </div>
-
             <div class="divider">
               <h4 class="text-lg font-extrabold">Task</h4>
               <p class="mt-2 text-slate-700 leading-relaxed">${escapeHtml(project.task)}</p>
             </div>
-
             <div class="divider">
               <div class="flex items-center justify-between gap-4">
                 <h4 class="text-lg font-extrabold">Action</h4>
@@ -1241,7 +1322,6 @@
                 `).join('')}
               </div>
             </div>
-
             <div class="divider">
               <h4 class="text-lg font-extrabold">Results & business impact</h4>
               <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -1302,25 +1382,323 @@
       `;
     }
 
-    function animateProgressBars(){
-      // Trigger only visible progress bars; safe for repeated calls.
-      requestAnimationFrame(() => {
-        $$('[data-progress]').forEach(bar => {
-          const pct = Math.max(0, Math.min(100, parseInt(bar.getAttribute('data-progress') || '0', 10)));
-          bar.style.width = pct + '%';
-        });
+    function renderBrandWheel(){
+      const el = $('#brandWheel');
+
+      el.innerHTML = `
+        <div class="card p-0 overflow-hidden bw-shell">
+          <!-- Executive header -->
+          <div class="bw-hero px-8 py-8 text-white">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+              <div>
+                <div class="text-xs uppercase tracking-[0.18em] text-white/70">Executive positioning</div>
+                <h2 class="mt-2 text-3xl md:text-4xl font-extrabold tracking-tight">Personal Brand Wheel</h2>
+                <p class="mt-3 text-white/80 max-w-3xl">A board-ready, decision-maker summary of what I stand for, how I lead, and the outcomes you can expect.</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="badge">PfMP®</span>
+                  <span class="badge">PgMP®</span>
+                  <span class="badge">PMP®</span>
+                  <span class="badge">DBA (Strategic Mgmt)</span>
+                </div>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-2">
+                <a href="#contact" class="px-4 py-2 rounded-xl bg-teal-400 hover:bg-teal-300 text-slate-950 font-extrabold">Engage me</a>
+                <button id="btnBwCopyTagline" type="button" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 font-semibold">Copy tagline</button>
+              </div>
+            </div>
+
+            <div class="mt-6 kpi p-4 bg-white/10 border-white/15">
+              <div class="text-xs uppercase tracking-wide text-white/70 font-bold">Tagline</div>
+              <div class="mt-2 text-2xl font-extrabold">Strategy → Execution → Measurable Value.</div>
+              <div class="mt-1 text-sm text-white/75">A pragmatic leadership promise: governance + adoption + benefits realization.</div>
+            </div>
+          </div>
+
+          <!-- Interactive wheel + details -->
+          <div class="px-8 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+              <div class="lg:col-span-2">
+                <div class="wheel-wrap p-6">
+                  <div class="flex flex-wrap gap-2 justify-center">
+                    <button class="bw-chip" type="button" data-bw="essence" aria-pressed="true">Core essence</button>
+                    <button class="bw-chip" type="button" data-bw="personality" aria-pressed="false">Personality</button>
+                    <button class="bw-chip" type="button" data-bw="values" aria-pressed="false">Values</button>
+                    <button class="bw-chip" type="button" data-bw="benefits" aria-pressed="false">Benefits</button>
+                    <button class="bw-chip" type="button" data-bw="attributes" aria-pressed="false">Attributes</button>
+                  </div>
+
+                  <div class="mt-6 relative">
+                    <svg class="wheel-canvas" viewBox="0 0 520 520" role="img" aria-label="Personal brand wheel diagram">
+                      <defs>
+                        <linearGradient id="gTeal" x1="0" y1="0" x2="1" y2="1">
+                          <stop offset="0" stop-color="#0d9488" stop-opacity="0.95" />
+                          <stop offset="1" stop-color="#14b8a6" stop-opacity="0.95" />
+                        </linearGradient>
+                        <linearGradient id="gNavy" x1="0" y1="0" x2="1" y2="1">
+                          <stop offset="0" stop-color="#0b1220" stop-opacity="0.92" />
+                          <stop offset="1" stop-color="#0f172a" stop-opacity="0.92" />
+                        </linearGradient>
+                        <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+                          <stop offset="0" stop-color="#d4af37" stop-opacity="0.75" />
+                          <stop offset="1" stop-color="#f4d06f" stop-opacity="0.70" />
+                        </linearGradient>
+                      </defs>
+
+                      <!-- subtle ring -->
+                      <circle cx="260" cy="260" r="246" fill="none" stroke="rgba(15,23,42,.10)" stroke-width="10" />
+
+                      <!-- 5 segments as donut slices -->
+                      <g id="bwSegments" transform="translate(260 260)">
+                        <!-- Each slice: outer r=230, inner r=120 -->
+                        <path class="wheel-seg active" data-bwseg="essence" d="M 0 -230 A 230 230 0 0 1 218.76 -68.31 L 114.14 -35.65 A 120 120 0 0 0 0 -120 Z" fill="url(#gTeal)" />
+                        <path class="wheel-seg" data-bwseg="personality" d="M 218.76 -68.31 A 230 230 0 0 1 135.29 186.23 L 70.59 97.18 A 120 120 0 0 0 114.14 -35.65 Z" fill="rgba(15,23,42,.85)" />
+                        <path class="wheel-seg" data-bwseg="values" d="M 135.29 186.23 A 230 230 0 0 1 -135.29 186.23 L -70.59 97.18 A 120 120 0 0 0 70.59 97.18 Z" fill="url(#gGold)" />
+                        <path class="wheel-seg" data-bwseg="benefits" d="M -135.29 186.23 A 230 230 0 0 1 -218.76 -68.31 L -114.14 -35.65 A 120 120 0 0 0 -70.59 97.18 Z" fill="rgba(2,6,23,.70)" />
+                        <path class="wheel-seg" data-bwseg="attributes" d="M -218.76 -68.31 A 230 230 0 0 1 0 -230 L 0 -120 A 120 120 0 0 0 -114.14 -35.65 Z" fill="rgba(20,184,166,.22)" />
+                      </g>
+
+                      <!-- inner circle border -->
+                      <circle cx="260" cy="260" r="122" fill="url(#gNavy)" stroke="rgba(255,255,255,.18)" stroke-width="2" />
+
+                      <!-- center text -->
+                      <text x="260" y="248" text-anchor="middle" fill="white" font-size="18" font-weight="800">Strategy → Execution</text>
+                      <text x="260" y="272" text-anchor="middle" fill="rgba(255,255,255,.78)" font-size="12" font-weight="600">Measurable Value</text>
+                      <text x="260" y="298" text-anchor="middle" fill="rgba(255,255,255,.72)" font-size="11" font-weight="600">Click a segment for details</text>
+                    </svg>
+                  </div>
+
+                  <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="kpi p-4">
+                      <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">Default narrative</div>
+                      <div class="mt-2 font-extrabold text-slate-900">Board-ready authority</div>
+                      <div class="mt-1 text-sm text-slate-600">Polished, decisive, outcome-driven—collaborative and adoption-focused.</div>
+                    </div>
+                    <div class="kpi p-4">
+                      <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">Decision lens</div>
+                      <div class="mt-2 font-extrabold text-slate-900">Governance + adoption</div>
+                      <div class="mt-1 text-sm text-slate-600">De-risk execution; ensure benefits are realized post go-live.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lg:col-span-3">
+                <div class="card p-7">
+                  <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                    <div>
+                      <div class="text-xs uppercase tracking-wide text-slate-500 font-bold" id="bwKicker">Core essence</div>
+                      <h3 class="mt-2 text-2xl font-extrabold" id="bwTitle">Core value proposition</h3>
+                      <p class="mt-2 text-slate-600" id="bwSummary">Executive portfolio leadership that translates strategy into governed, funded delivery—and measurable business value.</p>
+                    </div>
+                    <div class="flex gap-2">
+                      <button id="btnBwCopy" type="button" class="px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 font-semibold">Copy section</button>
+                      <a href="#contact" class="px-4 py-2 rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800">Request a call</a>
+                    </div>
+                  </div>
+
+                  <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="kpi p-5">
+                      <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">Executive-ready bullets</div>
+                      <ul class="mt-3 text-sm text-slate-700 space-y-2 detail-list" id="bwBullets"></ul>
+                    </div>
+                    <div class="kpi p-5">
+                      <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">Proof anchors</div>
+                      <div class="mt-3 grid grid-cols-2 gap-3" id="bwProof"></div>
+                    </div>
+                  </div>
+
+                  <div class="mt-6 border-t border-slate-200 pt-5">
+                    <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">Executive narrative (1–2 lines)</div>
+                    <div class="mt-2 text-slate-800 font-semibold" id="bwNarrative"></div>
+                  </div>
+                </div>
+
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div class="kpi p-6">
+                    <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">Engagement fit</div>
+                    <div class="mt-2 font-extrabold">Transformation portfolios</div>
+                    <div class="mt-2 text-sm text-slate-600">ERP/Cloud migration, PMO turnaround, benefits realization, adoption rescue.</div>
+                  </div>
+                  <div class="kpi p-6">
+                    <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">Operating cadence</div>
+                    <div class="mt-2 font-extrabold">Decision-focused</div>
+                    <div class="mt-2 text-sm text-slate-600">Steerco packs, stage gates, risk heatmaps, executive dashboards.</div>
+                  </div>
+                  <div class="kpi p-6">
+                    <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">Delivery footprint</div>
+                    <div class="mt-2 font-extrabold">Africa & MEA</div>
+                    <div class="mt-2 text-sm text-slate-600">Multi-country leadership across complex stakeholder environments in Africa & MEA.</div>
+                  </div>
+                </div>
+
+                <p class="mt-6 text-xs text-slate-500">Tip: Click wheel segments or chips to present the narrative that matches your audience (Board, CEO/COO, CIO, Transformation Sponsor).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Data model for interactive display
+      const sections = {
+        essence: {
+          kicker: 'Core essence',
+          title: 'Core value proposition',
+          summary: 'Executive portfolio leadership that translates strategy into governed, funded delivery—and measurable business value.',
+          bullets: [
+            'Executive portfolio leader translating corporate strategy into funded, governed portfolios with measurable outcomes.',
+            'Transformation delivery built on PMO governance, risk-managed execution, and sustained adoption.',
+            'Enterprise PMO builder/turnaround leader establishing decision frameworks, dashboards, and delivery discipline.',
+            'Board-level advisory and interim leadership for CEOs, COOs, CIOs facing transformation risk or portfolio optimization.',
+            'Strategic management research (DBA) integrated with multi-country delivery across Africa and MEA.'
+          ],
+          proof: [
+            { k: 'Portfolio value', v: '$50M+' },
+            { k: 'Success rate', v: '95%' },
+            { k: 'Satisfaction', v: '90%' },
+            { k: 'Countries', v: '6+' }
+          ],
+          narrative: 'I bridge strategy and execution to deliver measurable value—through governance that enables decisions and change that drives adoption.'
+        },
+        personality: {
+          kicker: 'Personality',
+          title: 'Leadership traits',
+          summary: 'Board-ready authority—polished, decisive, outcome-driven, and collaborative.',
+          bullets: [
+            'Outcome-focused: prioritizes benefits tracking and executive decision-making.',
+            'Calm authority: steady leadership in high-stakes transformations.',
+            'Governance-oriented: structure, transparency, accountability.',
+            'Pragmatic innovator: balances bold change with readiness and adoption.',
+            'Stakeholder-centric: builds coalitions; facilitates tough decisions.',
+            'Credible expert: PfMP®/PgMP®/PMP® + DBA rigor.',
+            'Approachable executive: respected and accessible for mentoring and strategy.'
+          ],
+          proof: [
+            { k: 'Tone', v: 'Executive' },
+            { k: 'Cadence', v: 'Steerco' },
+            { k: 'Style', v: 'Calm' },
+            { k: 'Focus', v: 'Outcomes' }
+          ],
+          narrative: 'Stakeholders experience calm, credible leadership that turns ambiguity into decisions, traction, and adoption.'
+        },
+        values: {
+          kicker: 'Values',
+          title: 'Core principles',
+          summary: 'A disciplined value system that de-risks delivery and ensures benefits are realized.',
+          bullets: [
+            'Measurable business value: every initiative ties to tracked benefits and strategic outcomes.',
+            'Strong governance & discipline: decision rights, stage gates, risk oversight, exec reporting.',
+            'Adoption that sticks: ADKAR/Kotter change enablement with measurable KPIs.',
+            'Executive alignment: portfolio balance and informed investment choices.',
+            'Continuous capability building: standards, tooling, and upskilling for durable maturity.',
+            'Multi-country execution excellence across Africa and MEA.'
+          ],
+          proof: [
+            { k: 'Method', v: 'PMI' },
+            { k: 'Change', v: 'ADKAR' },
+            { k: 'Governance', v: 'Stage-gates' },
+            { k: 'Benefits', v: 'Tracked' }
+          ],
+          narrative: 'My operating system is governance + adoption + benefits realization—so delivery translates into business results.'
+        },
+        benefits: {
+          kicker: 'Benefits',
+          title: 'What leaders gain',
+          summary: 'Concrete advantages executives can expect from my leadership and operating model.',
+          bullets: [
+            'Portfolio health improvements: better prioritization, reduced overruns, real-time visibility, optimized resources.',
+            'Transformations that deliver: 15–65% cost savings; 30–40% adoption/efficiency uplifts; 90%+ satisfaction.',
+            'Enterprise PMO frameworks enabling standardized reporting and predictable delivery.',
+            'Risk-managed execution paths with clear stage gates, benefits systems, and adoption KPIs.',
+            'Multi-country delivery expertise for ERP/Cloud migrations (Oracle, Primavera, Unifier, etc.) across Africa & MEA.',
+            'Board-friendly reporting—no noise, only actionable insights.',
+            'Accelerated organizational maturity through training, certification, and coaching.'
+          ],
+          proof: [
+            { k: 'Cost', v: '15–65%' },
+            { k: 'Adoption', v: '+30–40%' },
+            { k: 'Reporting', v: '-70% time' },
+            { k: 'Availability', v: '99.5%' }
+          ],
+          narrative: 'Executives get clarity, predictability, and measurable value—before, during, and after go-live.'
+        },
+        attributes: {
+          kicker: 'Attributes',
+          title: 'Observable proof points',
+          summary: 'Professional assets and evidence that reinforce credibility in boardrooms and C-suite settings.',
+          bullets: [
+            'Executive presence suited for boardrooms and C-suite engagements.',
+            'Credential distinction: PfMP®, PgMP®, PMP®, MBA (PM), ongoing DBA (Strategic Management).',
+            'Proven impact: $50M+ portfolio value; 95% project success; 90% satisfaction; multi-country delivery.',
+            'Tool mastery at enterprise scale: Oracle Cloud/Fusion, Primavera P6, Unifier, Power BI, ServiceNow, Jira.',
+            'Delivery reach: Orange Cameroon, MTN multi-country, Westcon Group, higher-ed governance boards across Africa & MEA.',
+            'Visible expertise: executive portfolio with STAR case studies, KPIs, downloadable data.',
+            'Networks: PMI chapters, PMO Global Alliance, Oracle ecosystem and partners.'
+          ],
+          proof: [
+            { k: 'Credentials', v: 'PfMP/PgMP' },
+            { k: 'Tools', v: 'Oracle/Primavera' },
+            { k: 'Governance', v: 'PMO' },
+            { k: 'Scale', v: 'Enterprise' }
+          ],
+          narrative: 'Credibility is supported by credentials, outcomes, and repeatable governance + change playbooks.'
+        }
+      };
+
+      const tagline = 'Strategy → Execution → Measurable Value.';
+
+      const setSection = (key) => {
+        const s = sections[key] || sections.essence;
+        $('#bwKicker').textContent = s.kicker;
+        $('#bwTitle').textContent = s.title;
+        $('#bwSummary').textContent = s.summary;
+        $('#bwNarrative').textContent = s.narrative;
+
+        const bulletsEl = $('#bwBullets');
+        bulletsEl.innerHTML = s.bullets.map(b => `<li>${escapeHtml(b)}</li>`).join('');
+
+        const proofEl = $('#bwProof');
+        proofEl.innerHTML = s.proof.map(p => `
+          <div class="p-3 rounded-xl border border-slate-200 bg-white">
+            <div class="text-xs uppercase tracking-wide text-slate-500 font-bold">${escapeHtml(p.k)}</div>
+            <div class="mt-1 text-lg font-extrabold text-slate-900">${escapeHtml(p.v)}</div>
+          </div>
+        `).join('');
+
+        // chips
+        $$('[data-bw]').forEach(btn => btn.setAttribute('aria-pressed', btn.getAttribute('data-bw') === key ? 'true' : 'false'));
+
+        // wheel segments
+        $$('[data-bwseg]').forEach(seg => seg.classList.toggle('active', seg.getAttribute('data-bwseg') === key));
+      };
+
+      // Wire interactions
+      $$('[data-bw]').forEach(btn => {
+        btn.addEventListener('click', () => setSection(btn.getAttribute('data-bw')));
       });
+
+      $$('[data-bwseg]').forEach(seg => {
+        seg.addEventListener('click', () => setSection(seg.getAttribute('data-bwseg')));
+      });
+
+      $('#btnBwCopy').addEventListener('click', async () => {
+        const active = $$('[data-bw]').find(b => b.getAttribute('aria-pressed') === 'true')?.getAttribute('data-bw') || 'essence';
+        const s = sections[active];
+        const text = `${s.kicker}: ${s.title}\n\n${s.summary}\n\n- ${s.bullets.join('\n- ')}\n\nNarrative: ${s.narrative}`;
+        await copyText(text);
+      });
+
+      $('#btnBwCopyTagline').addEventListener('click', async () => {
+        await copyText(tagline);
+      });
+
+      // default
+      setSection('essence');
     }
 
     // ------------------------------
     // State + filtering/search/sort
     // ------------------------------
-
-    const state = {
-      view: 'overview',
-      search: '',
-      sort: 'relevance'
-    };
+    const state = { view: 'overview', search: '', sort: 'relevance' };
 
     function viewToTitle(view){
       const map = {
@@ -1336,7 +1714,7 @@
 
     function computeVisibleProjects(){
       let list = [...projects];
-      if (state.view !== 'overview' && state.view !== 'brand'){
+      if (state.view !== 'overview' && state.view !== 'brand' && state.view !== 'brand-wheel'){
         list = list.filter(p => (p.categories || []).includes(state.view));
       }
 
@@ -1355,7 +1733,7 @@
       } else if (state.sort === 'kpi_desc'){
         list.sort((a,b) => kpiDensity(b) - kpiDensity(a));
       } else {
-        // relevance: keep original order but slightly bias if search
+        // relevance
         if (q){
           list.sort((a,b) => {
             const score = (p) => {
@@ -1377,23 +1755,36 @@
     }
 
     function refresh(){
-      // Brand view uses separate section
+      // Brand view
       if (state.view === 'brand'){
         $('#brand').classList.remove('hidden');
+        $('#brandWheel').classList.add('hidden');
         $('#portfolio').classList.add('hidden');
         $('#dashboard').classList.add('hidden');
         renderBrand();
+        location.hash = '#brand';
         return;
       }
 
+      // Brand wheel view
+      if (state.view === 'brand-wheel'){
+        $('#brandWheel').classList.remove('hidden');
+        $('#brand').classList.add('hidden');
+        $('#portfolio').classList.add('hidden');
+        $('#dashboard').classList.add('hidden');
+        renderBrandWheel();
+        location.hash = '#brandWheel';
+        return;
+      }
+
+      // Default views
       $('#brand').classList.add('hidden');
+      $('#brandWheel').classList.add('hidden');
       $('#portfolio').classList.remove('hidden');
       $('#dashboard').classList.remove('hidden');
 
-      // Dashboard
       renderDashboard(state.view);
 
-      // Titles
       $('#sectionTitle').textContent = viewToTitle(state.view);
       const list = computeVisibleProjects();
       const scopeLabel = state.view === 'overview' ? 'full portfolio' : state.view.replaceAll('-', ' ');
@@ -1431,7 +1822,6 @@
     // ------------------------------
     // Contact modal + helpers
     // ------------------------------
-
     function openModal(){
       $('#contactModal').classList.remove('hidden');
       document.body.classList.add('overflow-hidden');
@@ -1448,7 +1838,6 @@
         await navigator.clipboard.writeText(text);
         toast('Copied to clipboard.');
       } catch {
-        // Fallback
         const ta = document.createElement('textarea');
         ta.value = text;
         document.body.appendChild(ta);
@@ -1494,14 +1883,12 @@
     // ------------------------------
     // Events
     // ------------------------------
-
     // Nav
     $$('.nav-btn[data-view]').forEach(btn => {
       btn.addEventListener('click', () => {
         state.view = btn.getAttribute('data-view');
         setActiveNav(state.view);
         refresh();
-        if (state.view === 'brand') location.hash = '#brand';
       });
     });
 
@@ -1510,6 +1897,7 @@
       state.search = e.target.value;
       refresh();
     });
+
     $('#sort').addEventListener('change', (e) => {
       state.sort = e.target.value;
       refresh();
@@ -1517,6 +1905,7 @@
 
     // Buttons
     $('#btnCollapseAll').addEventListener('click', collapseAll);
+
     $('#btnDownloadJson').addEventListener('click', () => {
       const data = { generatedAt: new Date().toISOString(), projects };
       const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
@@ -1533,7 +1922,12 @@
 
     function wireCTAs(){
       [
-        '#btnOpenContact', '#btnOpenContact2', '#btnOpenContact3', '#btnOpenContact4', '#btnOpenContact5', '#btnPrimaryCTA'
+        '#btnOpenContact',
+        '#btnOpenContact2',
+        '#btnOpenContact3',
+        '#btnOpenContact4',
+        '#btnOpenContact5',
+        '#btnPrimaryCTA'
       ].forEach(id => {
         const el = $(id);
         if (el) el.addEventListener('click', openModal);
@@ -1543,16 +1937,17 @@
     wireCTAs();
 
     $('#btnCloseModal').addEventListener('click', closeModal);
+
     $('#contactModal').addEventListener('click', (e) => {
       if (e.target === $('#contactModal') || e.target === $('#contactModal').firstElementChild) closeModal();
     });
+
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && !$('#contactModal').classList.contains('hidden')) closeModal();
     });
 
     $('#btnCopyEmail').addEventListener('click', () => copyText('nnogge.lovis@gmail.com'));
     $('#btnCopyEmail2').addEventListener('click', () => copyText('nnogge.lovis@gmail.com'));
-
     $('#btnPrint').addEventListener('click', () => window.print());
 
     let lastDraft = '';
@@ -1574,6 +1969,54 @@
       copyText(lastDraft);
     });
 
+    // ------------------------------
+    // Executive finish: UX polish
+    // ------------------------------
+    function initReveal(){
+      const els = $$('.reveal');
+      if (!('IntersectionObserver' in window)){
+        els.forEach(el => el.classList.add('show'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting){
+            e.target.classList.add('show');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      els.forEach(el => io.observe(el));
+    }
+
+    function initNavElevation(){
+      const nav = $('#topNav');
+      if (!nav) return;
+      const onScroll = () => {
+        nav.classList.toggle('nav-elevated', window.scrollY > 8);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+
+    function initFloatingButtons(){
+      const topBtn = $('#btnBackToTop');
+      const pdfBtn = $('#btnDownloadPdf');
+      if (pdfBtn) pdfBtn.addEventListener('click', () => window.print());
+
+      const onScroll = () => {
+        if (!topBtn) return;
+        topBtn.classList.toggle('hidden', window.scrollY < 520);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      if (topBtn){
+        topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+      }
+    }
+
     // Init
     $('#year').textContent = new Date().getFullYear();
     setActiveNav('overview');
@@ -1581,11 +2024,19 @@
     renderProjects(projects, `Showing ${projects.length} items (full portfolio)`);
     animateProgressBars();
     wireCollapseButtons();
+    initReveal();
+    initNavElevation();
+    initFloatingButtons();
 
-    // If hash is brand, open it
-    if (location.hash === '#brand'){
+    // Hash routing (supports deep-links)
+    const hash = (location.hash || '').replace('#','');
+    if (hash === 'brand'){
       state.view = 'brand';
       setActiveNav('brand');
+      refresh();
+    } else if (hash.toLowerCase() === 'brandwheel' || hash.toLowerCase() === 'brand-wheel'){
+      state.view = 'brand-wheel';
+      setActiveNav('brand-wheel');
       refresh();
     }
   </script>
